@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!--INICIO BARRA SUPERIOR - BUSCAR PRODUCTO-->    
+    <!--INICIO BARRA SUPERIOR PRINCIPAL- BUSCAR PRODUCTO-->    
     <div class="container-fluid color-dark">
         <div class="sub-contenedor row align-items-center py-1 mx-5 px-5">
             <div class="ocultar-redes col-4 col-md-3 col-lg-4">
@@ -73,19 +73,20 @@
             </div>
         </div>
     </div>    
-    <!--FIN BARRA SUPERIOR - BUSCAR PRODUCTO-->
+    <!--FIN BARRA SUPERIOR PRINCIPAL- BUSCAR PRODUCTO-->
 
-    <div class="bg-light shadow">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light  bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="#"  width="200px" class="text-mr">
+    <!--INICIO BARRA SUPERIOR SECUNDARIA BUSCAR PRODUCTO-->
+    <div class="barra-secundario">
+        <div class="row ">
+            <nav class="col-12 navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid row">
+                    <a class="text-center navbar-brand col-4" href="#">
+                        <img src="../resources/icons/lisfashion-nav.svg"  width="200px" class="text-mr">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="div-links text-center collapse navbar-collapse col-8" id="navbarSupportedContent" style="width: 100%;"> 
                         <ul class="navbar-nav ms-auto mb-5 mb-lg-1">
                             <li class="nav-item">
                                 <a class="nav-link active DroidSerif-Regular" aria-current="page" href="#">INICIO</a>
@@ -126,31 +127,29 @@
             </nav>
         </div>
     </div>
-    
+    <!--FIN BARRA SUPERIOR SECUNDARIA BUSCAR PRODUCTO-->
+
+    <!--INICIO INFORMACION DE LA EMPRESA-->
     <div class="container my-4">
         <p class="text-center DroidSerif-Italic">
-            <i aria-hidden="true" class="fas fa-phone" style="color: var(--rojo-global);"></i>&nbsp09 98729 9999
-            &nbsp&nbsp
-            <i aria-hidden="true" class="fas fa-phone" style="color: var(--rojo-global);"></i>&nbsp09 9560 5000
-            &nbsp&nbsp
-            <i aria-hidden="true" class="fas fa-map-marker-alt" style="color: var(--rojo-global);"></i>&nbspPiedrahita
-            413 y Rumichaca, Guayaquil - Ecuador&nbsp&nbsp                
-            <i aria-hidden="true" class="far fa-clock" style="color: var(--rojo-global);"></i>&nbspLun - Viernes 09:00
-            -18:00
-            &nbsp&nbsp
-            <i aria-hidden="true" class="fas fa-envelope"
-                style="color: var(--rojo-global);"></i>&nbspinfo@lisfashionsa.com
+            <i aria-hidden="true" class="fas fa-phone" style="color: var(--color-secundario);"></i>&nbsp09 98729 9999&nbsp&nbsp
+            <i aria-hidden="true" class="fas fa-phone" style="color: var(--color-secundario);"></i>&nbsp09 9560 5000&nbsp&nbsp
+            <i aria-hidden="true" class="fas fa-map-marker-alt" style="color: var(--color-secundario);"></i>&nbspPiedrahita 413 y Rumichaca, Guayaquil - Ecuador&nbsp&nbsp
+            <i aria-hidden="true" class="far fa-clock" style="color: var(--color-secundario);"></i>&nbspLun - Viernes 09:00 -18:00&nbsp&nbsp
+            <i aria-hidden="true" class="fas fa-envelope" style="color: var(--color-secundario);"></i>&nbspinfo@lisfashionsa.com&nbsp
         </p>
     </div>
+    <!--FIN INFORMACION DE LA EMPRESA-->
 
+    <!--INICIO FORMULARIO DE CONTACTO-->
     <div id="formulario" class="container">
-        <h1 class="fw-bold text-center my-2" style="color: var(--rojo-global);">Contáctanos</h1>
+        <h1 class="text-center my-2" style="color: var(--color-secundario);">Contáctanos</h1>
         <div class="container mb-2">
-            <div class="row">
-                <form class="contact" action="" method="post">
+            <div class="row justify-content-center">
+                <form class="contact" action="" method="" style="width: 100%">
                     <div class="row">
                         <div class="col-6">
-                            <label for="exampleFormControlInput1" class="form-label">Nombres y apellidos</label>
+                            <label class="form-label">Nombres y apellidos</label>
                             <input type="text" class="form-control" name="nombres" id="nombreApellido">
                         </div>
                         <div class="col-6">
@@ -169,21 +168,22 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="mb-3">
+                        <div class="pl-3 mb-3 pr-3" style="width: 100%">
                             <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
                             <textarea class="form-control" name="mensaje"  id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <input type="submit" name="enviar" class="btn btn-danger my-2" value="Enviar" style="border-radius: 25px; width: 200px;">
-
                     </div>
                 </form>                
             </div>
         </div>
     </div>
+    <!--FIN FORMULARIO DE CONTACTO-->
 
-    <div class="py-4" style="background-image: url(#);">
+    <!--INICIO BARRA REDES SOCIALES-->
+    <div class="py-4 barra-rs">
         <div class="container">
             <div class="row">
                 <div class="col-2" style="text-align: center;">
@@ -207,24 +207,25 @@
             </div>
         </div>
     </div>
+    <!--FIN BARRA REDES SOCIALES-->
 
-    <div class="container">
-        <div class="row">
-            <h1 class="fw-bold text-center my-2" style="color: var(--rojo-global);">Ubícanos</h1>
-            <p class="text-center">¡Te esperamos en nuestras instalaciones!</p>
-        </div>
+    <div class="container text-center pb-1">        
+        <h1 class="my-2" style="color: var(--color-secundario);">Ubícanos</h1>
+        <p>¡Te esperamos en nuestras instalaciones!</p>        
     </div>
     
     <section class="my-4 py-4" style="background-color: #c9c8c8;">
         <div class="container-md">
             <div class="row justify-content-around align-items-center">
                 <div class="col col-lg-4">
-                    <img src="#" class="img-fluid" style="border:0; border-radius: 5px;">
+                    <img src="../resources/images/Edificio.jpg" class="img-fluid" style="border:0; border-radius: 5px;">
                 </div>
                 <div class="col">
                     <iframe
+                        class="iframe-mapa"
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996.72948032635!2d-79.885726!3d-2.184823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6dd7570890cf%3A0x5426b68f3f216304!2sRumichaca%20%26%20Vicente%20de%20Piedrahita%2C%20Guayaquil%20090312!5e0!3m2!1ses-419!2sec!4v1621826749657!5m2!1ses-419!2sec"
-                        height="300" style="border:0; border-radius: 5px;width:100%" allowfullscreen=""
+                        height="465" 
+                        allowfullscreen=""
                         loading="lazy">
                     </iframe>
                 </div>
@@ -232,7 +233,7 @@
         </div>
     </section>
     
-    <div class="fondoInfo py-4">
+    <div class="fondo-pie-pagina py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
@@ -243,7 +244,7 @@
                         bandeja de entrada.
                     </P>
                     <input type="submit" value="REGISTRATE AQUÍ" class="btn btn-danger px-5"
-                        style="color:var(--rojo-global); color: white;">
+                        style="color:var(--color-secundario); color: white;">
                     <div class="redesSociales my-4">
                         <a href="https://www.instagram.com/lisfashion.ec/" class="fab fa-instagram text-white"></a>
                         <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white" style="margin-left: 10px;"></a>
@@ -253,9 +254,9 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold" style="color:var(--rojo-global);">NOSOTROS</h5>
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">NOSOTROS</h5>
                     <P class="text-white DroidSerif-Regular">Contáctanos</P>
-                    <h5 class="fw-bold" style="color:var(--rojo-global);">INFORMACIÓN</h5>
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">INFORMACIÓN</h5>
                     <P class="text-white DroidSerif-Regular">Preguntas frecuentes:</P>
                     <P class="text-white DroidSerif-Regular">¿Cómo comprar?</P>
                     <P class="text-white DroidSerif-Regular">Guía de tallas</P>
@@ -264,8 +265,8 @@
                     <P class="text-white DroidSerif-Regular">Promociones vigentes</P>
                 </div>
                 <div class="col-md-3">
-                    <P class="text-white DroidSerif-Regular"><span class="fas fa-map-marker-alt" Style="color:var(--rojo-global); font-size: 15px;"></span> UBICACIÓN</P>                        
-                    <P class="text-white DroidSerif-Regular"><span class="far fa-user-circle" style="color:var(--rojo-global); font-size: 15px;"></span> MI CUENTA</P>
+                    <P class="text-white DroidSerif-Regular"><span class="fas fa-map-marker-alt" Style="color:var(--color-secundario); font-size: 15px;"></span> UBICACIÓN</P>                        
+                    <P class="text-white DroidSerif-Regular"><span class="far fa-user-circle" style="color:var(--color-secundario); font-size: 15px;"></span> MI CUENTA</P>
                 </div>
             </div>
             <div class="row">
@@ -273,5 +274,8 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 </body>
 </html>

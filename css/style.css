@@ -1,5 +1,6 @@
 :root{
     --color-primario: #212429;
+    --color-secundario: #dd2a33;
 }
 
 .color-dark{
@@ -18,7 +19,7 @@
     border-radius: 5px;
 }
 
-@media screen and (min-width: 780px){/*aplica de 1250px en adelante*/
+@media screen and (min-width: 780px){/*aplica de 780px en adelante*/
     .barra-buscar{
         width: 85%;
     }
@@ -63,3 +64,76 @@
     }
 }
 
+.barra-secundario{
+    background-color: #f8f9fb;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    width: 100% !important;
+}
+
+.contenedor-bs{
+    display: flex;
+    justify-content: center;    
+}
+
+.navbar{
+    display: flex;    
+    justify-content:space-between !important;
+    padding: auto, 0;
+    margin: auto, 0;
+}
+
+.fondo-pie-pagina {
+    background: linear-gradient(rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50)), url(../resources/images/Fondo-pie-pagina.jpg);
+    background-position: center;
+}
+
+.barra-rs{
+    background-image: url(../resources/images/Fondo-redes-sociales.jpg);
+}
+
+.div-links{
+    width: 100%;
+}
+
+.iframe-mapa{
+    border:0;
+    border-radius: 5px;
+    width:100%    
+}
+
+/*aplica de 1250px para abajo*/
+@media screen and (max-width: 1250px){
+    .iframe-mapa{
+        height: 375px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .iframe-mapa{
+        height: 325px;
+    }
+}
+
+@media screen and (max-width: 1092px){
+    .iframe-mapa{
+        height: 455px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .iframe-mapa{
+        height: 325px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .iframe-mapa{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .iframe-mapa{
+        height: 200px;
+    }
+}
