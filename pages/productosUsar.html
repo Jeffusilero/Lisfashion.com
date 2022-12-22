@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+  <style>
+    .menu {
+      width: 100%;
+    }
+
+    li .item-filtro {
+      display: block;
+      float: left;
+      margin: 9.75px;
+      padding: 12.5px;
+      color: black;
+    }
+
+    .item-filtro:hover {
+      background-color: var(--rojo-global);
+      border-radius: 10px;
+      color: white;
+    }
+
+    .border-radius-imagen {
+      border-radius: 5px;
+    }
+
+    /* estilos para las imagenes, pero no me salieron super bien, creo, pero no se si es tambien culpa del div principal */
+    .productos {
+      margin-bottom: 50px;
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .productos-enter {
+      transform: scale(0.5) translatey(-80px);
+      opacity: 0;
+    }
+
+    .productos-leave-to {
+      transform: translatey(30px);
+      opacity: 0;
+    }
+
+
+    .producto {
+      transition: all .35s ease-in-out;
+      align-items: center;
+      display: flex;
+    }
+
+    .border-radius-imagen:hover {
+      border: 1px solid var(--rojo-global);
+    }
+
+    .page-link {
+      left: 700px;
+      border: none;
+      color: black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="app">
+  <span class="far fa-arrow-alt-circle-up ir-arriba"></span>
+  <a href="https://api.whatsapp.com/send?phone=+593995605000&text=Quiero%20informaci%C3%B3n%20sobre"
+    target="_blank"><span class="fab fa-whatsapp ir-whatsapp"></span></a>
+
+  <!------------------------- Barra de Redes, busqueda, cuenta, carrito y localizacion--------------------------->
+  <div class="bg-dark">
+    <div class="container-lg">
+      <div class="row text-white py-1 align-items-center">
+        <div class="col-4 col-md-3 col-lg-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-xl-5 hide-siguenos">
+              <div class="row align-items-center">
+                <div class="col-3">
+                  <span class="fas fa-check-circle text-white my-2" aria-hidden="true"> </span>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="logo1 text-white my-2"> <span>Síguenos</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-2">
+                  <a href="https://www.instagram.com/lisfashion.ec"
+                  class="fab fa-instagram text-white tamanioRedesHeader my-2"></a>
+                </div>
+                <div class="col-2">
+                  <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white tamanioRedesHeader my-2"></a>
+                </div>
+                <div class="col-2">
+                  <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white tamanioRedesHeader my-2"></a>
+                </div>
+                <div class="col-2">
+                  <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white tamanioRedesHeader my-2"></a>
+                </div>
+                <div class="col-2">
+                  <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin text-white tamanioRedesHeader my-2"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form v-on:submit.prevent="inicializarValorBusqueda" method="" class="col-5 col-md-7 col-lg-5">
+          <div class="barra-busqueda justify-content-end">
+              <input class="estilo bg-dark text-white" id="inputBusqueda" v-model="valorBusqueda" type="text" placeholder="Busca tu producto">
+              <button type="submit" class="btn btn-outline-light" id="btnBuscar" title="Buscar">
+                <i class="fas fa-search"></i>
+              </button>
+          </div>
+        </form>
+
+        <div class="col">
+          <!-- <div class="col-3 offset-1"> -->
+            <div class="row justify-content-end align-items-center">
+              <div class="col-md-6 d-lg-flex justify-content-end hide-micuenta">
+                <a href="#" class="text-white my-2"> <span class="">Mi cuenta</span></a>
+              </div>
+              <div class="col-4 col-lg-2">
+                <span class="fav far fa-user-circle tamanioRedesHeader"></span>
+              </div>
+              <div class="col-4 col-lg-2">
+                <a href=""><span class="fav fas fa-map-marker-alt text-white tamanioRedesHeader"></span></a>
+              </div>
+              <div class="col-4 col-lg-2">
+                <a href=""><span class="fav fas fa-shopping-cart text-white tamanioRedesHeader"></span></a>
+              </div>
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- navar -->
+  <div class="bg-light shadow">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light  bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../../res/icon/lisfashion-nav.svg" class="imagenes" text-mr>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-5 mb-lg-1">
+              <li class="nav-item"><a class="nav-link active DroidSerif-Regular" aria-current="page"
+                  href="../../index.html">INICIO</a></li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/nosotros/nosotros.html">NOSOTROS</a>
+              </li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/productos/productos.html">PRODUCTOS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle DroidSerif-Regular" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  SERVICIOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item DroidSerif-Italic hoveSubmenu"
+                      href="../../view/lineaConfeccion/lineaConfeccion.html">Línea de
+                      Confección</a></li>
+                  <li><a class="dropdown-item DroidSerif-Italic hoveSubmenu"
+                      href="../../view/etiquetado/etiquetado.html">Etiquetado</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular" href="../tienda/tiendaOnline.html">TIENDA
+                  ONLINE</a></li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/noticias/noticias.html">NOTICIAS</a>
+              </li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/contactanos/contactanos.php">CONTACTOS</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- titulo -->
+  <!-- seccion #productosw -->
+
+  <div class="container">
+    <h1 class="text-center DroidSerif-Bold my-4" style="color: var(--rojo-global);">PRODUCTOS DE CALIDAD</h1>
+  </div>
+
+  <!-- seccion #productosr -->
+  <div style="background-color: var(--rojo-global);">
+    <h4 class=" py-3 DroidSerif-Italic text-center text-white">Poseemos la capacidad de atender los mas exigentes
+      proyectos, tanto de calidad como de cantidad.</h4>
+  </div>
+
+  <!-- seccion #barraProductos -->
+
+  <div class="container">
+    <v-app>
+      <v-main>
+        <!-- nav de filtro -->
+        <!-- Modificado aqui, puse los bind class y los on clicks para poner filtros diferentes. cambie de <a> a <span> para que el sitio no se autorefresque-->
+        <div class="row">
+          <ol class="menu">
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('TODO')">All</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Corporativa')">Corporativa</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Moda')">Moda</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Deportiva')">Deportiva</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Seguridad industrial')">Seguridad
+                industrial</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Hoteleria y limpieza')">Hoteleria y
+                limpieza</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Salud y alimenticia')">Salud y
+                alimenticia</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Publicidad y promociones')">Publicidad y
+                promociones</span></li>
+            <li><span class="item-filtro DroidSerif-Regular" v-on:click="get('Marroquineria')">Marroquineria</span></li>
+          </ol>
+        </div>
+        <!-- seccion #galeria -->
+        <!--  INICIO Darien Altamirano -->
+        <div v-if="catalogo.length != 0">
+          <div class="row">
+
+
+            <!-- aqi esta el v-if para el filtro, la funcion filtroactual es lo que hace que se muestren las que se necesiten.-->
+            <!-- v-if="filtroActual === foto.line || filtroActual === 'TODO'" -->
+
+            <div class="col mb-4 productos" v-for="foto in catalogo[page - 1]">
+                <img v-bind:src="'../images/'+ foto" width="250px" height="300px" class="producto">
+              </div>
+          </div>
+
+          <div class="text-center">
+            <v-container>
+              <v-row justify="center">
+                <v-col cols="8">
+                  <v-container class="max-width">
+                    <v-pagination v-model="page" class="my-1" :length="paginas" ></v-pagination>
+                  </v-container>
+                </v-col>
+              </v-row>
+            </v-container>
+          </div>
+
+        </div>
+        <h4 v-else>Cargando productos... </h4>
+
+
+      </v-main>
+    </v-app>   
+  </div>
+
+ <!-- FIN FDarien Altamirano -->
+  
+ 
+ <!-- <div>
+      <hr width=70% style="left: 235px;" size=3>
+      </hr>
+      <nav aria-label="Page navigation example" style="right: 150px">
+        <ul class="pagination">
+          <li v-on:click="getPreviousPage()" class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li v-for="i in totalPaginas()" v-on:click="getDataPagina(i)" v-bind:class="isActive(i)" class="page-item">
+            <a class="page-link" href="#">{{ i }}</a>
+          </li>
+
+          <li v-on:click="getNextPage()" class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div> -->
+  </div>
+</div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+    // const firebaseConfig = {
+    //   apiKey: "AIzaSyCmN7q1qRfShLWQXXt5f33ZIE0k6a8hwlE",
+    //   authDomain: "proyecto-web-25bba.firebaseapp.com",
+    //   projectId: "proyecto-web-25bba",
+    //   storageBucket: "proyecto-web-25bba.appspot.com",
+    //   messagingSenderId: "936206598176",
+    //   appId: "1:936206598176:web:e6e41eb1b3fd6a93493c45",
+    //   measurementId: "G-09QSWHGMHY"
+    // };
+    const firebaseConfig = {
+      apiKey: "AIzaSyB6yz94Tm4kudlb9AOOckluy2nVxloIc9g",
+      authDomain: "productolisfashion.firebaseapp.com",
+      projectId: "productolisfashion",
+      storageBucket: "productolisfashion.appspot.com",
+      messagingSenderId: "65113675229",
+      appId: "1:65113675229:web:99a4a7a7321c7c70aa1234",
+      measurementId: "G-CDVTDG4CJ6"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+
+    var app = new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: {
+        fotos: [],
+        token: 0,
+        filtroActual: "TODO",
+        elementos_x_pagina: 12,
+        datosPaginados: [],
+        paginaActual: 1,
+        tamano: 0,
+
+        // Darien Altamirano
+        catalogo: [],
+        total: 0,
+        paginas: 0,
+        porPagina: 24,
+        page: 1,
+        catalogos:[],
+
+        //Manuel Loor
+        valorBusqueda: '',
+      },
+      created() {
+        //Manuel Loor
+        var local = localStorage.getItem('busqueda');
+        this.inicializarValorBusqueda();
+
+        console.log(local)
+        //Si el input de la barra de busqueda no recibe alguna categoría, se presentarán todos los productos.
+        if (local == '')
+        {
+          this.get('TODO');
+        }
+        else
+        {
+          this.filtrarBusqueda(local);
+        }
+      },
+      mounted: function () {
+        this.mostrarFotos()
+      },
+      methods: {
+        mostrarFotos: function () {
+          axios.get('../../Panel-Administrador/panelProductosFirebase/mostrar-producto.php?accion=mostrarTodo')
+            .then(response => {
+              app.fotos = response.data;
+              console.log(app.fotos);
+              this.datosPaginados = this.fotos.slice(0, this.elementos_x_pagina);
+            });
+        },
+        ponerFiltro: function (filtro) {
+          this.paginaActual = 1;
+          this.filtroActual = filtro;
+          this.datosPaginados = [];
+          for (i = 0; i < this.fotos.length; i++) {
+            if (this.fotos[i].line == this.filtroActual) {
+              this.datosPaginados.push(this.fotos[i]);
+            }
+          }
+          if (this.filtroActual == "TODO") {
+            this.datosPaginados = this.fotos.slice(0, this.elementos_x_pagina);
+          }
+          this.tamano = this.datosPaginados.length;
+          this.datosPaginados = this.datosPaginados.slice(0, this.elementos_x_pagina);
+        },
+        //este método se encarga de obtener el numero de páginas de acuerdo a una cantidad fija de elementos
+        //en este caso a modo de prueba solo se tienen 5 elemento por página
+        totalPaginas() {
+          if (this.filtroActual == "TODO") {
+            return Math.ceil(this.fotos.length / this.elementos_x_pagina);
+          }
+          else {
+            return Math.ceil(this.tamano / this.elementos_x_pagina);
+          }
+        },
+        //este metodo se encarga de obtener los datos que le corresponden a cada numero de página.
+        getDataPagina: function (noPagina) {
+          this.paginaActual = noPagina;
+          let inicio = (noPagina * this.elementos_x_pagina) - this.elementos_x_pagina;
+          let fin = (noPagina * this.elementos_x_pagina);
+
+          //como se aplica un filtro, cuando el filtro es TODO se utiliza el arreglo de fotos
+          if (this.filtroActual == "TODO") {
+            this.datosPaginados = this.fotos;
+          }
+          else {
+            //si el filtro el diferente se usa otro arreglo y solo se añade los elementos que coinciden con el filtro
+            this.datosPaginados = [];
+            for (i = 0; i < this.fotos.length; i++) {
+              if (this.fotos[i].line == this.filtroActual) {
+                this.datosPaginados.push(this.fotos[i]);
+              }
+            }
+          }
+          this.datosPaginados = this.datosPaginados.slice(inicio, fin);
+        },
+
+        //este metodo se encarga de obtener la pagina previa
+        getPreviousPage() {
+          if (this.paginaActual > 1) {
+            this.paginaActual--;
+          }
+          this.getDataPagina(this.paginaActual);
+        },
+
+        //este metodo se encarga de obtener la pagina siguiente
+        getNextPage() {
+          if (this.paginaActual < this.totalPaginas()) {
+            this.paginaActual++;
+          }
+          this.getDataPagina(this.paginaActual);
+        },
+
+        //este método se encarga de mostrar de manera visual que página se encuentra activa
+        isActive: function (noPagina) {
+          if (noPagina == this.paginaActual) {
+            return 'active';
+          }
+          else {
+            return '';
+          }
+        },
+        // DARIEN ALTAMIRANO
+        get: function (linea) {
+          this.catalogo = [];
+          this.catalogos=[];
+          contador =0;
+          total =0;
+          if (linea === 'TODO') {
+            db.collection("catalogo").orderBy("orden","asc").get()
+              .then((querySnapshot) => {
+                this.total = querySnapshot.size;
+              this.paginas = Math.ceil(querySnapshot.size / this.porPagina)
+                querySnapshot.forEach((doc) => {
+                  if(contador < this.porPagina ){
+                    contador++;
+                    total++;
+                    this.catalogos.push(doc.data().url)
+                    console.log(this.total)
+                    console.log(contador)
+                    if(total == this.total || contador  == this.total){
+                      this.catalogo.push(this.catalogos)
+                      console.log("entra")
+                    }
+                  }
+                  else
+                  {
+                      this.catalogo.push(this.catalogos)
+                      contador=0;
+                      this.catalogos=[];
+                      this.catalogos.push(doc.data().url)
+                      contador++;
+                      total++;
+                      if(total == this.total)
+                      {
+                        this.catalogo.push(this.catalogos)
+                      }
+                  }
+                });
+              }).then(()=>{
+                console.log(this.catalogo)
+              })
+              .catch((error) => {
+                console.error("Error adding document: ", error);
+              });
+          } else {
+            db.collection("catalogo").where("lineas", "==", linea).orderBy("nombre","asc").get()
+              .then((querySnapshot) => {
+                this.total = querySnapshot.size;
+                this.paginas = Math.ceil(querySnapshot.size / this.porPagina)
+                querySnapshot.forEach((doc) => {
+                  if(contador < this.porPagina ){
+                    this.catalogos.push(doc.data().url)
+                    contador++;
+                    total++;
+                    if(total == this.total){
+                      this.catalogo.push(this.catalogos)
+                    }
+                  }
+                  else{
+                      this.catalogo.push(this.catalogos)
+                      contador=0;
+                      this.catalogos=[];
+                      this.catalogos.push(doc.data().url)
+                      contador++;
+                      total++;
+                      if(total == this.total){
+                        this.catalogo.push(this.catalogos)
+                    }
+                  }
+                });
+              })
+              .catch((error) => {
+                console.error("Error adding document: ", error);
+              });
+          }
+        },
+        //MANUEL LOOR MACÍAS
+        inicializarValorBusqueda: function ()
+        {
+          this.valorBusqueda = localStorage.getItem('busqueda');
+          let consulta = document.getElementById('inputBusqueda').value
+          if (consulta != '')
+          {
+            this.valorBusqueda = localStorage.setItem('busqueda', consulta);
+          }
+        },
+        //MANUEL LOOR MACIAS
+        filtrarBusqueda: function (valor)
+        {
+          let localRegex = new RegExp(valor, "gi");
+          let categorias = new Array('Corporativa','Moda','Deportiva','Seguridad industrial','Hoteleria y limpieza',
+                            'Salud y alimenticia','Publicidad y promociones','Marroquineria');
+          let filtro = false;
+          for (let i = 0; i < categorias.length; i++)
+          {
+            if (localRegex.test(categorias[i]))
+            {
+              this.get(categorias[i]);
+              filtro = true;
+              break;
+            }
+          }
+          if (!filtro)
+          {
+            this.get('TODO');
+          }
+        }
+      },
+    });
+  </script>
+
+  <!--PIE DE PAGINA  -->
+  <div class="fondoInfo py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="DroidSerif-Bold text-white">¡REGISTRARME!</h1>
+          <P class="text-white DroidSerif-Regular">
+            Recibe oferta especiales, noticias exclusivas de productos e información sobre eventos
+            directamente en tu
+            bandeja de entrada.
+          </P>
+          <input type="submit" value="REGISTRATE AQUÍ" class="btn btn-danger px-5"
+            style="color:var(--rojo-global); color: white;">
+          <div class="redesSociales my-4">
+            <a href="https://www.instagram.com/lisfashion.ec/" class="fab fa-instagram text-white"></a>
+            <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white"
+              style="margin-left: 10px;"></a>
+            <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white" style="margin-left: 10px;"></a>
+            <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white"
+              style="margin-left: 10px;"></a>
+            <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin-in text-white"
+              style="margin-left: 10px;"></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold" style="color:var(--rojo-global);">NOSOTROS</h5>
+          <P class="text-white DroidSerif-Regular">Contáctanos</P>
+
+          <h5 class="fw-bold" style="color:var(--rojo-global);">INFORMACIÓN</h5>
+          <P class="text-white DroidSerif-Regular">Preguntas frecuentes:</P>
+          <P class="text-white DroidSerif-Regular">¿Cómo comprar?</P>
+          <P class="text-white DroidSerif-Regular">Guía de tallas</P>
+          <P class="text-white DroidSerif-Regular">Actualiza tus datos</P>
+          <P class="text-white DroidSerif-Regular">Registrar tu bono</P>
+          <P class="text-white DroidSerif-Regular">Promociones vigentes</P>
+
+        </div>
+        <div class="col-md-3">
+          <P class="text-white DroidSerif-Regular"><span class="fas fa-map-marker-alt"
+              style="color:var(--rojo-global); font-size: 15px;"></span> UBICACIÓN</P>
+          
+          <P class="text-white DroidSerif-Regular"><span class="far fa-user-circle"
+              style="color:var(--rojo-global); font-size: 15px;"></span> MI CUENTA</P>
+        </div>
+      </div>
+      <div class="row">
+        <p class="text-end text-white DroidSerif-Regular">© 2021 CPROTEC Derechos Reservados</p>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const btnBuscar = document.getElementById('btnBuscar');
+      btnBuscar.addEventListener('click', function () {
+          localStorage.setItem('busqueda', '');
+          let valor_busqueda = document.getElementById('inputBusqueda').value;
+          localStorage.setItem('busqueda', valor_busqueda);
+          window.location.href = 'productos.html';
+      });
+    });
+  </script>
+  <script src="../../js/botonesFlotante.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

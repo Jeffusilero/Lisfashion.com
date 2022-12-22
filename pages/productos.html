@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Poductos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/productos.css">
+</head>
+<body>
+    <!--INICIO BARRA SUPERIOR PRINCIPAL- BUSCAR PRODUCTO-->    
+    <div class="container-fluid color-dark">
+        <div class="sub-contenedor row align-items-center py-1 mx-5 px-5">
+            <div class="ocultar-redes col-4 col-md-3 col-lg-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-xl-5 ocultar">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <span class="fas fa-check-circle text-white my-2" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="logo1 text-white my-2"> <span>Síguenos</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-start align-items-center">
+                            <div class="col-2">
+                                <a href="https://www.instagram.com/lisfashion.ec" class="fab fa-instagram text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-5 col-md-7 col-lg-5">
+                <div class="row">                
+                    <input class="barra-buscar bg-dark text-white" type="text" placeholder="Busca tu producto">
+                    <button type="button" class="btn btn-outline-light" title="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>                
+                </div>
+            </div>
+            
+            <div class="col">                        
+                <div class="b row justify-content-around align-items-center">
+                    <div class="ocultar-cuenta col-md-6 justify-content-end">
+                        <a href="#" class="text-white my-2"> <span class="">Mi cuenta</span></a>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <span class="fa fa-user-circle text-white tamanioRedesHeader fa-lg"></span>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <a href=""><span class="fav fas fa-map-marker-alt text-white tamanioRedesHeader fa-lg"></span></a>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <a href=""><span class="fav fas fa-shopping-cart text-white tamanioRedesHeader fa-lg"></span></a>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>    
+    <!--FIN BARRA SUPERIOR PRINCIPAL- BUSCAR PRODUCTO-->
+
+    <!--INICIO BARRA SUPERIOR SECUNDARIA BUSCAR PRODUCTO-->
+    <div class="barra-secundario">
+        <div class="row ">
+            <nav class="col-12 navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid row">
+                    <a class="text-center navbar-brand col-4" href="#">
+                        <img src="../resources/icons/lisfashion-nav.svg"  width="200px" class="text-mr">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="div-links text-center collapse navbar-collapse col-8" id="navbarSupportedContent" style="width: 100%;"> 
+                        <ul class="navbar-nav ms-auto mb-5 mb-lg-1">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">NOSOTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PRODUCTOS</a>
+                            </li>
+                            <li class="nav-item dropdown"> 
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item font-italic hoveSubmenu" href="#">
+                                            Línea de Confección
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item font-italic hoveSubmenu" href="#">
+                                            Etiquetado
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">TIENDA ONLINE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">NOTICIAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CONTÁCTOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--FIN BARRA SUPERIOR SECUNDARIA BUSCAR PRODUCTO-->
+    
+    <!--INICIO PRODUCTOS DE CALIDAD-->
+    <div class="container">
+        <h1 class="text-center font-weight-bold my-4" style="color: var(--color-secundario);">
+            PRODUCTOS DE CALIDAD
+        </h1>
+    </div>
+    <!--FIN PRODUCTOS DE CALIDAD-->
+    
+    <!--INICIO BARRA DETALLE-->
+    <div style="background-color: var(--color-secundario);">
+        <h4 class=" py-3 font-italic text-center text-white">
+            Poseemos la capacidad de atender los mas exigentes proyectos, tanto de calidad como de cantidad.
+        </h4>
+    </div>
+    <!--FIN BARRA DETALLE-->
+    
+    <!--INICIO FILTROS-->
+    <div class="container">
+        <div class="contenedor-menu">
+            <ul class="row menu">
+                <li class="todos"><a href="#" class="h6 btn-menu" data-filter="todos">Todo</a></li>
+                <li class="corporativa"><a href="#" class="h6 btn-menu" data-filter="corporativa">Corporativa</a></li>
+                <li class="moda"><a href="#" class="h6 btn-menu" data-filter="moda">Moda</a></li>
+                <li class="deportiva"><a href="#" class="h6 btn-menu" data-filter="deportiva">Deportiva</a></li>
+                <li class="seguridad"><a href="#" class="h6 btn-menu" data-filter="seguridad">Seguridad industrial</a></li>
+                <li class="hoteleria"><a href="#" class="h6 btn-menu" data-filter="hoteleria">Hoteleria y limpieza</a></li>
+                <li class="salud"><a href="#" class="h6 btn-menu" data-filter="salud">Salud y alimenticia</a></li>
+                <li class="publicidad"><a href="#" class="h6 btn-menu" data-filter="publicidad">Publicidad y promociones</a></li>
+                <li class="marroquineria"><a href="#" class="h6 btn-menu" data-filter="marroquineria">Marroquineria</a></li>
+            </ul>
+        </div>
+
+        <div class="galeria">
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/1.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/2.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/3.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/4.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/5.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/6.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/7.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/8.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/9.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/10.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/11.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/12.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/13.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/14.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/15.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/16.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/17.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/18.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/19.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/20.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/21.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/22.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/23.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/24.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/25.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/26.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/27.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/28.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/29.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/30.jpg" alt="">
+            </div>
+            <div class="box-img corporativa">
+                <img src="../images/1. coorporativo/31.jpg" alt="">
+            </div>
+            <!--FIN COORPORATIVO-->
+
+            <!--INICIO MODA-->
+            <div class="box-img moda">
+                <img src="../images/2. moda/5.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/6.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/7.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/8.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/9.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/10.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/11.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/12.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/13.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/14.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/15.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/16.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/17.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/18.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/19.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/20.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/21.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/22.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/23.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/24.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/25.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/26.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/27.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/28.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/29.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/30.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/31.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/32.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/33.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/34.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/35.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/36.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/37.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/38.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/39.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/40.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/41.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/42.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/43.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/44.jpg" alt="">
+            </div>
+            <div class="box-img moda">
+                <img src="../images/2. moda/45.jpg" alt="">
+            </div>
+            <!--FIN MODA-->
+
+            <!--INICIO DEPORTIVO-->
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/11.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/12.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/13.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/14.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/15.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/16.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/17.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/18.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/19.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/20.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/21.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/22.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/23.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/24.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/25.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/26.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/27.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/28.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/29.jpg" alt="">
+            </div>
+            <div class="box-img deportiva">
+                <img src="../images/3. deportivo/30.jpg" alt="">
+            </div>
+            <!--FIN DEPORTIVA-->
+
+            <!--INICIO SEGURIDAD INDUSTRIAL-->
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/2.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/3.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/4.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/5.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/6.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/7.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/8.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/9.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/10.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/11.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/12.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/13.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/14.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/15.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/16.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/17.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/18.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/19.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/20.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/21.jpg" alt="">
+            </div>
+            <div class="box-img seguridad">
+                <img src="../images/4. seguridad Industrial/22.jpg" alt="">
+            </div>
+            <!--FIN SEGURIDAD INDUSTRIAL-->
+
+            <!--INICIO HOTELERIA Y LIMPIEZA-->
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/1.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/2.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/3.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/4.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/5.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/6.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/7.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/8.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/9.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/10.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/11.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/12.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/13.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/14.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/15.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/16.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/17.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/18.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/19.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/20.jpg" alt="">
+            </div>
+            <div class="box-img hoteleria">
+                <img src="../images/5. hoteleria y limpieza/21.jpg" alt="">
+            </div>
+            <!--FIN HOTELERIA Y LIMPIEZA-->
+
+            <!--INICIO SALUD Y ALIMENTICIA-->
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/1.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/2.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/3.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/4.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/5.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/6.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/7.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/8.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/9.jpg" alt="">
+            </div>
+            <div class="box-img salud">
+                <img src="../images/6. Salud y Alimenticia/10.jpg" alt="">
+            </div>
+            <!--FIN SALUD Y ALIMENTICIA-->
+
+            <!--INICIO PUBLICIDAD Y PROMOCIONES-->
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/1.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/2.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/3.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/4.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/5.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/6.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/7.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/8.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/9.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/10.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/11.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/12.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/13.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/14.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/15.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/16.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/17.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/18.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/19.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/20.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/21.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/22.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/23.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/24.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/25.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/26.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/27.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/28.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/29.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/30.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/31.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/32.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/33.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/34.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/35.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/36.jpg" alt="">
+            </div>
+            <div class="box-img publicidad">
+                <img src="../images/7. Publicidad y promociones/37.jpg" alt="">
+            </div>
+            <!--FIN PUBLICIDAD Y PROMOCIONES-->
+
+            <!--INICIO MARROQUINERIA-->
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/1.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/2.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/3.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/4.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/5.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/6.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/7.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/8.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/9.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/10.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/11.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/12.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/13.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/14.jpg" alt="">
+            </div>
+            <div class="box-img marroquineria">
+                <img src="../images/8. Marroquineria/15.jpg" alt="">
+            </div>
+            <!--FIN MARROQUINERIA-->
+        </div>
+
+        <div class="container p-3 mb-3">
+            <div class="d-flex justify-content-center py-2">
+                <nav class="my-1" role="navigation" aria-label="Pagination Navigation">
+                    <ul class="pagination">
+                        <!--Aquí se creará la paginación dinámica-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--FIN FILTROS-->
+
+    <!--INICIO FOOTER-->
+    <div class="fondo-pie-pagina py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1 class="DroidSerif-Bold text-white">¡REGISTRARME!</h1>
+                    <P class="text-white">
+                        Recibe oferta especiales, noticias exclusivas de productos e información sobre eventos
+                        directamente en tu
+                        bandeja de entrada.
+                    </P>
+                    <input type="submit" value="REGISTRATE AQUÍ" class="btn btn-danger px-5"
+                        style="color:var(--color-secundario); color: white;">
+                    <div class="redesSociales my-4">
+                        <a href="https://www.instagram.com/lisfashion.ec/" class="fab fa-instagram text-white"></a>
+                        <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white" style="margin-left: 10px;"></a>
+                        <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white" style="margin-left: 10px;"></a>
+                        <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white" style="margin-left: 10px;"></a>
+                        <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin-in text-white" style="margin-left: 10px;"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">NOSOTROS</h5>
+                    <P class="text-white">Contáctanos</P>
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">INFORMACIÓN</h5>
+                    <P class="text-white">Preguntas frecuentes:</P>
+                    <P class="text-white">¿Cómo comprar?</P>
+                    <P class="text-white">Guía de tallas</P>
+                    <P class="text-white">Actualiza tus datos</P>
+                    <P class="text-white">Registrar tu bono</P>
+                    <P class="text-white">Promociones vigentes</P>
+                </div>
+                <div class="col-md-3">
+                    <P class="text-white"><span class="fas fa-map-marker-alt" Style="color:var(--color-secundario); font-size: 15px;"></span> UBICACIÓN</P>                        
+                    <P class="text-white"><span class="far fa-user-circle" style="color:var(--color-secundario); font-size: 15px;"></span> MI CUENTA</P>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-end text-white">© 2021 CPROTEC Derechos Reservados</p>
+            </div>
+        </div>
+    </div>
+    <!--FIN FOOTER-->
+    <script src="../js/jquery-3.6.2.min.js"></script>
+    <script src="../js/filtro.js"></script>
+</body>
+</html>

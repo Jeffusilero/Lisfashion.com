@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/55809e2d82.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="icon" type="image/x-icon" href="../../res/icon/logo.svg" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../css/fuentes.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+  <style>
+    .menu {
+      width: 100%;
+    }
+
+    li .item-filtro {
+      display: block;
+      float: left;
+      margin: 9.75px;
+      padding: 12.5px;
+      color: black;
+    }
+
+    .item-filtro:hover {
+      background-color: var(--rojo-global);
+      border-radius: 10px;
+      color: white;
+    }
+
+    .border-radius-imagen {
+      border-radius: 5px;
+    }
+/* estilos para las imagenes, pero no me salieron super bien, creo, pero no se si es tambien culpa del div principal */
+    .productos {
+      margin-bottom:50px;
+      margin-top:25px;
+      display:flex;
+      flex-wrap:wrap;
+    }
+    .productos-enter {
+      transform: scale(0.5) translatey(-80px);
+      opacity:0;
+    }
+
+    .productos-leave-to{
+      transform: translatey(30px);
+      opacity:0;
+    }
+
+
+    .producto{
+      transition: all .35s ease-in-out;
+      align-items: center;
+      display:flex;
+    }
+
+    .border-radius-imagen:hover {
+      border: 1px solid var(--rojo-global);
+    }
+
+    .page-link{
+    left: 700px; 
+    border: none;
+    color:black;
+  }
+  </style>
+
+</head>
+
+<body>
+
+
+  <span class="far fa-arrow-alt-circle-up ir-arriba"></span>
+  <a href="https://api.whatsapp.com/send?phone=+593995605000&text=Quiero%20informaci%C3%B3n%20sobre"
+    target="_blank"><span class="fab fa-whatsapp ir-whatsapp"></span></a>
+
+  <!-- //Redes // -->
+
+
+  <div class="bg-dark">
+    <div class=" container">
+      <div class="row text-white py-1">
+        <div class="col-4 ">
+          <span class="fas fa-check-circle text-white mx-1 my-2" style="left: -50px;"> </span>
+          <a href="#" class="logo1 text-white  mx-1 my-1" style="left: -40px;"> <span>Siguenos</span></a>
+          <a href="https://www.instagram.com/lisfashion.ec"
+            class="fab fa-instagram text-white tamanioRedesHeader mx-1 my-2" style="left: -25px"></a>
+          <a href="https://www.facebook.com/lisfashionecu"
+            class="fab fa-facebook-f text-white tamanioRedesHeader mx-1 my-2" style="left: -20px"></a>
+          <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white tamanioRedesHeader mx-1 my-2"
+            style="left: -15px"></a>
+          <a href="https://twitter.com/lisfashionsaec?s=09"
+            class="fab fa-twitter text-white tamanioRedesHeader mx-1 my-2" style="left: -10px"></a>
+          <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/"
+            class="fab fa-linkedin text-white tamanioRedesHeader mx-1 my-2" style="left: -5px"></a>
+        </div>
+
+
+
+        <div class="col-3 col3-md-3 offset-md-3">
+          <div class="row">
+            <div class="barra-busqueda">
+              <input class="form-control estilo bg-dark text-white " type="text" placeholder="Busca tu producto">
+              <button type="submit" class="btn btn-outline-light">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-2 position-absolute end-0">
+          <a href="#" class="logo2 text-white  mx-1 my-1" style="left: -20px;"> <span>Mi cuenta</span></a>
+          <span class="far fa-user-circle tamanioRedesHeader mx-1 my-2"></span>
+          <a href=""><span class="fas fa-map-marker-alt text-white tamanioRedesHeader mx-1 my-2"></span></a>
+          <a href=""><span class="fas fa-shopping-cart text-white tamanioRedesHeader mx-1 my-2"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- navar -->
+  <div class="bg-light shadow">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light  bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../../res/icon/lisfashion-nav.svg" width="200px" class="text-mr">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-5 mb-lg-1">
+              <li class="nav-item"><a class="nav-link active DroidSerif-Regular" aria-current="page"
+                  href="../../index.html">INICIO</a></li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/nosotros/nosotros.html">NOSOTROS</a>
+              </li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/productos/productos.html">PRODUCTOS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle DroidSerif-Regular" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  SERVICIOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item DroidSerif-Italic hoveSubmenu"
+                      href="../../view/lineaConfeccion/lineaConfeccion.html">Línea de
+                      Confección</a></li>
+                  <li><a class="dropdown-item DroidSerif-Italic hoveSubmenu"
+                      href="../../view/etiquetado/etiquetado.html">Etiquetado</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular" href="../tienda/tiendaOnline.html">TIENDA
+                  ONLINE</a></li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/noticias/noticias.html">NOTICIAS</a>
+              </li>
+              <li class="nav-item"><a class="nav-link DroidSerif-Regular"
+                  href="../../view/contactanos/contactanos.php">CONTÁCTOS</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- titulo -->
+  <!-- seccion #productosw -->
+
+  <div class="container">
+    <h1 class="text-center DroidSerif-Bold my-4" style="color: var(--rojo-global);">PRODUCTOS DE CALIDAD</h1>
+  </div>
+
+
+
+
+  <!-- seccion #productosr -->
+  <div style="background-color: var(--rojo-global);">
+    <h4 class=" py-3 DroidSerif-Italic text-center text-white">Poseemos la capacidad de atender los mas exigentes
+      proyectos, tanto de calidad como de cantidad.</h4>
+  </div>
+
+  <!-- seccion #barraProductos -->
+
+
+
+
+
+  <div id="app" class="container">
+    <!-- nav de filtro -->
+    <!-- Modificado aqui, puse los bind class y los on clicks para poner filtros diferentes. cambie de <a> a <span> para que el sitio no se autorefresque-->
+    <div class="row">
+      <ol class="menu">
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'TODO' }" v-on:click="ponerFiltro('TODO')">All</span></li>
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'Corporativa' }" v-on:click="ponerFiltro('Corporativa')">Corporativa</span></li>
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'Moda' }" v-on:click="ponerFiltro('Moda')">Moda</span></li>
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'Deportiva' }" v-on:click="ponerFiltro('Deportiva')">Deportiva</span></li>
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'Seguridad' }" v-on:click="ponerFiltro('Seguridad')">Seguridad industrial</span></li>
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'Hoteleria' }" v-on:click="ponerFiltro('Hoteleria')">Hoteleria y limpieza</span></li>
+        <li><span class="item-filtro DroidSerif-Regular" v-bind:class="{ active: filtroActual === 'Salud' }" v-on:click="ponerFiltro('Salud')">Salud y alimenticia</span></li>
+      </ol>
+    </div>
+    <!-- seccion #galeria -->
+
+    <div class="row">
+
+
+      <!-- aqui esta el v-if para el filtro, la funcion filtroactual es lo que hace que se muestren las que se necesiten.-->
+      <div class="col mb-4 productos" v-if="filtroActual === foto.line || filtroActual === 'TODO'"   v-for="foto in datosPaginados">
+        <img :src="foto.photo" width="250px" height="300px" class = "producto">
+      </div>
+
+
+
+    </div>
+
+    <div>
+      <hr width=70% style="left: 235px;" size=3></hr>
+      <nav aria-label="Page navigation example" style="right: 150px" >
+        <ul class="pagination">
+          <li v-on:click="getPreviousPage()" class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <!--se utiliza el metodo totalPaginas y el metodo getDatapagina para los datos necesarios-->
+          <li v-for="i in totalPaginas()" v-on:click="getDataPagina(i)" v-bind:class="isActive(i)"  class="page-item">
+            <a class="page-link" href="#">{{ i }}</a>
+          </li>
+  
+          <li v-on:click="getNextPage()" class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+
+  </div>
+
+
+  <script>
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        fotos: [],
+        token: 0,
+        filtroActual: "TODO",
+        elementos_x_pagina: 12,
+        datosPaginados:[],
+        paginaActual:1,
+        tamano:0
+      },
+      mounted: function () {
+        this.mostrarFotos()
+      },
+      methods: {
+        mostrarFotos: function () {
+          axios.get('../../Panel-Administrador/panelProductosFirebase/mostrar-producto.php?accion=mostrarTodo')
+            .then(response => {
+              app.fotos = response.data;
+              console.log(app.fotos);
+              this.datosPaginados=this.fotos.slice(0,this.elementos_x_pagina);
+            });
+        },
+        ponerFiltro: function(filtro) {
+          this.paginaActual=1;
+          this.filtroActual = filtro;
+          this.datosPaginados=[];
+          for (i=0; i < this.fotos.length; i++){
+            if(this.fotos[i].line == this.filtroActual){
+              this.datosPaginados.push(this.fotos[i]);
+            }
+          }
+          if(this.filtroActual=="TODO"){
+            this.datosPaginados=this.fotos.slice(0,this.elementos_x_pagina);
+          }
+          this.tamano=this.datosPaginados.length;
+          this.datosPaginados=this.datosPaginados.slice(0,this.elementos_x_pagina);
+        },
+        //este método se encarga de obtener el numero de páginas de acuerdo a una cantidad fija de elementos
+        //en este caso a modo de prueba solo se tienen 5 elemento por página
+        totalPaginas(){
+          if(this.filtroActual == "TODO")
+          {
+            return Math.ceil(this.fotos.length / this.elementos_x_pagina);
+          }
+          else
+          {
+            return Math.ceil(this.tamano / this.elementos_x_pagina);
+          }
+        },
+        //este metodo se encarga de obtener los datos que le corresponden a cada numero de página.
+        getDataPagina: function(noPagina)
+        {
+          this.paginaActual=noPagina;
+          let inicio=(noPagina*this.elementos_x_pagina) - this.elementos_x_pagina;
+          let fin=(noPagina*this.elementos_x_pagina);
+
+          //como se aplica un filtro, cuando el filtro es TODO se utiliza el arreglo de fotos
+          if(this.filtroActual== "TODO")
+          {
+            this.datosPaginados=this.fotos;
+          }
+          else
+          {
+            //si el filtro el diferente se usa otro arreglo y solo se añade los elementos que coinciden con el filtro
+            this.datosPaginados=[];
+            for (i=0; i < this.fotos.length; i++)
+            {
+              if(this.fotos[i].line == this.filtroActual)
+              {
+                this.datosPaginados.push(this.fotos[i]);
+              }
+            }
+          }
+          this.datosPaginados=this.datosPaginados.slice(inicio,fin);
+        },
+
+        //este metodo se encarga de obtener la pagina previa
+        getPreviousPage()
+        {
+          if(this.paginaActual > 1)
+          {
+            this.paginaActual--;
+          }
+          this.getDataPagina(this.paginaActual);
+        },
+
+        //este metodo se encarga de obtener la pagina siguiente
+        getNextPage()
+        {
+          if(this.paginaActual < this.totalPaginas())
+          {
+            this.paginaActual++;
+          }
+          this.getDataPagina(this.paginaActual);
+        },
+
+        //este método se encarga de mostrar de manera visual que página se encuentra activa
+        isActive: function(noPagina)
+        {
+          if(noPagina == this.paginaActual)
+          {
+            return 'active';
+          }
+          else
+          {
+            return '';
+          }
+        }
+      }
+    });
+  </script>
+
+  <!--PIE DE PAGINA  -->
+  <div class="fondoInfo py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="DroidSerif-Bold text-white">¡REGISTRARME!</h1>
+          <P class="text-white DroidSerif-Regular">
+            Recibe oferta especiales, noticias exclusivas de productos e información sobre eventos
+            directamente en tu
+            bandeja de entrada.
+          </P>
+          <input type="submit" value="REGISTRATE AQUÍ" class="btn btn-danger px-5"
+            style="color:var(--rojo-global); color: white;">
+          <div class="redesSociales my-4">
+            <a href="https://www.instagram.com/lisfashion.ec/" class="fab fa-instagram text-white"></a>
+            <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white"
+              style="margin-left: 10px;"></a>
+            <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white" style="margin-left: 10px;"></a>
+            <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white"
+              style="margin-left: 10px;"></a>
+            <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin-in text-white"
+              style="margin-left: 10px;"></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-bold" style="color:var(--rojo-global);">NOSOTROS</h5>
+          <P class="text-white DroidSerif-Regular">Contáctanos</P>
+
+          <h5 class="fw-bold" style="color:var(--rojo-global);">INFORMACIÓN</h5>
+          <P class="text-white DroidSerif-Regular">Preguntas frecuentes:</P>
+          <P class="text-white DroidSerif-Regular">¿Cómo comprar?</P>
+          <P class="text-white DroidSerif-Regular">Guía de tallas</P>
+          <P class="text-white DroidSerif-Regular">Actualiza tus datos</P>
+          <P class="text-white DroidSerif-Regular">Registrar tu bono</P>
+          <P class="text-white DroidSerif-Regular">Promociones vigentes</P>
+
+        </div>
+        <div class="col-md-3">
+          <P class="text-white DroidSerif-Regular"><span class="fas fa-map-marker-alt"
+              style="color:var(--rojo-global); font-size: 15px;"></span> UBICACIÓN</P>
+          <P class="text-white DroidSerif-Regular"><span class="far fa-clock"
+              style="color:var(--rojo-global); font-size: 15px;"></span>
+            RASTREA TU PEDIDOS</P>
+          <P class="text-white DroidSerif-Regular"><span class="far fa-user-circle"
+              style="color:var(--rojo-global); font-size: 15px;"></span> MI CUENTA</P>
+        </div>
+      </div>
+      <div class="row">
+        <p class="text-end text-white DroidSerif-Regular">© 2021 CPROTEC Derechos Reservados</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/botonesFlotante.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
