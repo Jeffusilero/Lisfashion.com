@@ -1,0 +1,152 @@
+
+*,
+body,
+html {
+  padding: 0;
+  position: relative;
+}
+
+.titulo{
+    color: red;
+}
+/* Estilos de las cajas y animaciรณn */
+.box {
+      position: relative;
+      margin-bottom: 10px;
+      height: 100%;
+      width: 100%;
+  
+  }
+  /* modificaciones para modal: boton cerrar de modal*/
+  .modal-body .close {
+      margin: 0;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      background-color: red;
+      color: #ebeae4;
+      font-size: 15px;
+      opacity: 1;
+      z-index: 10;
+    }
+
+    footer{
+        padding-top: 100px;
+    }
+      
+    /* vista paravil modal horizontal*/
+  @media screen and (min-width: 360px) and (max-width: 800px) {
+      .col-md-6{
+      height:auto;
+      width: 50%;
+      
+      }
+      .modal-dialog{
+          margin-left: 20px;
+          position: fixed;
+          right: 26px;
+          top: 10%;
+          left: 10px;
+          
+      }
+     
+      .box{
+          height:100%;
+      }
+      .modal{
+          position: fixed;
+      }
+     
+      }
+  .modal-body{
+          padding-left: 2.5%;
+          padding-right: 2.5%;
+          padding-top: 2.5%;
+          padding-bottom: 2.5%;
+         
+      }
+  .box:hover .power {
+          height: 100%;
+          top: 0;
+  }
+  
+  
+  .box img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: .8;
+      filter: alpha(opacity=80);
+  
+  }
+  
+  .power {
+      width: 100%;
+      height: 15%;
+      background-color: rgba(224, 36, 40, 0.8);
+      position: absolute;
+      top: 85%;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      transition: .4s ease;
+  }
+  .modal-dialog{
+      top:10%;
+  }
+  .power p {
+      text-align: left;
+      line-height: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 25px;
+      font-size: 15px;
+  }
+  
+  .power h2 {
+      padding: 4%;
+      margin: 0 auto;
+      font-size: 125%;
+  }
+  
+  .leer {
+      margin-top: 10px;
+      color: white;
+      font-size: 16px;
+      border: 2px solid white;
+      padding: 10px;
+      text-decoration: none;
+  
+  }
+  
+  .leer:hover {
+      color: rgb(224, 36, 40);
+      background: #ffffff;
+  
+  }
+  
+  /* videos */
+  .power-videos {
+        height: 50px;
+        width: 100%;
+        background-color: rgba(224, 36, 40, 0.8);
+        position: absolute;
+        top: 300px;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+    }
+  
+    .h2-video{
+        margin-top: 5px;
+    }
+  
+  .posicion-barra{
+      transform: translate(0%, -162%);
+  }
+  .posicion-barra2{
+      transform: translate(0%, -175%);
+  }

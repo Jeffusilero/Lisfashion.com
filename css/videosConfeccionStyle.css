@@ -1,0 +1,236 @@
+.boton-play  {
+    background-color: transparent;
+    border: none;
+    color: rgb(243, 236, 236);
+    font-size: 50px; 
+    left:190px; 
+    top: -208px;
+    }
+    video::-webkit-media-controls {
+      display: none;
+    }
+    .power-videos{
+      top: 345px;
+    }
+    .row .col-md-4 {
+      height: 340px;
+    }
+    .fondoInfo {
+      top: 80px;
+    }
+    .power-videos {
+    height: 50px;
+    background-color: rgba(224, 36, 40, 0.8);
+    position: absolute;
+    top: 345px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    transition: .4s ease;
+    } 
+    
+    /*---------------------------------------------------------------------------------------------------------------*/
+    
+    @media screen and (min-width: 768px) and (max-width: 1023px){    
+      .boton-play  {
+        font-size: 50px;
+        left:100px; 
+        top: -150px;
+      }
+      .video-l video {
+        height: 300px;
+      }
+      .power-videos h2 {
+          padding: 11px;
+          margin: 0 auto;
+          font-size: 15px; 
+        }
+        .power-videos {
+          top: 205px;
+        } 
+       
+        .row .col-md-4{
+          height: 100%;
+        }
+        .power {
+          top: 230px; 
+        }
+        .power h2 {
+          padding: 13px;
+          margin: 0 auto;
+          font-size: 15px;
+        }
+        .box:hover .power {
+          height: 285px;
+        }
+        .box img {
+          height: 280px;
+        }
+        .fondoInfo {
+          top: 50px;
+        }
+        }   
+    
+        @media screen and (min-width: 1024px) and (max-width: 1366px){    
+          .boton-play  {
+            font-size: 50px;
+            left:125px; 
+            top: -150px;
+          }
+    
+          .power-videos h2 {
+              padding: 11px;
+              margin: 0 auto;
+              font-size: 15px; 
+              top: 5px;
+            }
+            .power-videos {
+              top: 310px;
+            }
+            .power h2 {
+              padding: 13px;
+              margin: 0 auto;
+              font-size: 15px;
+            } }
+    
+    @media screen and (min-width: 400px) and (max-width: 539px){
+    
+      .boton-play  {
+        font-size: 50px;
+        left:175px; 
+        top: -200px;
+      }
+          
+      .power-videos h2 {
+        font-size: 15px; 
+        top: 10px; 
+    }
+    .power-videos {
+      top: 325px;
+    } 
+    
+    .power h2 {
+      padding: 13px;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+    .power {
+      top: 278px;
+    }
+    .box img {
+      max-width: 100% ;
+      height: 325px;
+      opacity: .8;
+    }
+    }
+    @media screen  and (max-width: 411px){
+    .boton-play  {
+      font-size: 50px;
+      left:130px; 
+      top: -180px;
+    }
+    .power-videos h2 {
+      font-size: 15px;  
+      top: 10px;
+    }
+    .power h2 {
+      padding: 13px;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+    .power-videos {
+      top: 290px;
+    } 
+    .row .col-md-4{
+      height: 290px;
+    }
+    .power {
+      top: 230px; 
+    }
+    .box:hover .power {
+      height: 285px;
+    }
+    .box img {
+      height: 280px;
+    }
+    .fondoInfo {
+      top: 50px;
+    }
+    }
+    
+    @media screen and (min-width: 320px) and (max-width: 358px){
+    
+      .boton-play  {
+        font-size: 50px;
+        left:125px; 
+        top: -170px;
+      }
+    .power-videos {
+      top: 255px;
+    }}
+    @media screen and (min-width: 375px) and (max-width: 400px){
+    
+    .power-videos {
+      top: 300px;
+    }}
+    
+    @media screen and (min-width: 280px) and (max-width: 300px){
+      .power-videos h2 {
+        font-size: 15px; 
+        top: 10px; 
+    }
+    
+      .power-videos {
+        top: 270px;
+      }
+      .boton-play  {
+        font-size: 50px;
+        left:100px; 
+        top: -150px;
+      }
+      .power h2 {
+        padding: 13px;
+        margin: 0 auto;
+        font-size: 15px;
+      }
+    
+    
+    }
+    
+    @media screen and (min-width: 540px) and (max-width: 720px){
+      .boton-play  {
+        font-size: 50px;
+        left:250px; 
+        top: -250px;
+      }
+      .power-videos h2 {
+        font-size: 18px;  
+        top: 10px;
+      }
+      .power h2 {
+        padding: 13px;
+        margin: 0 auto;
+        font-size: 18px;
+      }
+      .power-videos {
+        top: 420px;
+      } 
+      .row .col-md-4{
+        height: 400px;
+      }
+      .power {
+        top: 315px; 
+      }
+      .box:hover .power {
+        height: 360px;
+      }
+      .box img {
+        max-width: 100% ;
+        height: 360px;
+        opacity: .8;
+      
+      }
+    
+      }
+
+      

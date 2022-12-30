@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetado</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon/logo.svg" />
+    <link rel="stylesheet" href="../css/serviciosStyle.css">
+    <link rel="stylesheet" href="../css/videosConfeccionStyle.css">
+    <link rel="stylesheet" href="../css/iconos.css">
+    <link rel="stylesheet" href="../css/fuentes.css">
+    <link rel="stylesheet" href="../assets/icomoon/fonts/style.css">
+    <link rel="stylesheet" href="../css/etiqueta.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .caja {
+            width: 100%;
+            height: 500px;
+            background-color: #dad8d8;
+            overflow: auto;
+
+        }
+    </style>
+</head>
+<header>
+    <div class="container-fluid color-dark">
+        <div class="sub-contenedor row align-items-center py-1 mx-5 px-5">
+            <div class="ocultar-redes col-4 col-md-3 col-lg-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-xl-5 ocultar">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <span class="fas fa-check-circle text-white my-2" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="logo1 text-white my-2"> <span>Síguenos</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-start align-items-center">
+                            <div class="col-2">
+                                <a href="https://www.instagram.com/lisfashion.ec" class="fab fa-instagram text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-5 col-md-7 col-lg-5">
+                <div class="row">                
+                    <input class="barra-buscar bg-dark text-white" type="text" placeholder="Busca tu producto">
+                    <button type="button" class="btn btn-outline-light" title="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>                
+                </div>
+            </div>
+            
+            <div class="col">                        
+                <div class="b row justify-content-around align-items-center">
+                    <div class="ocultar-cuenta col-md-6 justify-content-end">
+                        <a href="#" class="text-white my-2"> <span class="">Mi cuenta</span></a>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <span class="fa fa-user-circle text-white tamanioRedesHeader fa-lg"></span>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <a href=""><span class="fav fas fa-map-marker-alt text-white tamanioRedesHeader fa-lg"></span></a>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <a href=""><span class="fav fas fa-shopping-cart text-white tamanioRedesHeader fa-lg"></span></a>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>    
+    <!--FIN BARRA SUPERIOR PRINCIPAL- BUSCAR PRODUCTO-->
+    
+    <!--INICIO BARRA SUPERIOR SECUNDARIA BUSCAR PRODUCTO-->
+    <div class="barra-secundario">
+        <div class="row ">
+            <nav class="col-12 navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid row">
+                    <a class="text-center navbar-brand col-4" href="#">
+                        <img src="../resources/icons/lisfashion-nav.svg"  width="200px" class="text-mr">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="div-links text-center collapse navbar-collapse col-8" id="navbarSupportedContent" style="width: 100%;"> 
+                        <ul class="navbar-nav ms-auto mb-5 mb-lg-1">
+                            <li class="nav-item">
+                                <a class="nav-link active DroidSerif-Regular" aria-current="page" href="#">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">NOSOTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">PRODUCTOS</a>
+                            </li>
+                            <li class="nav-item dropdown"> 
+                                <a class="nav-link dropdown-toggle DroidSerif-Regular" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item DroidSerif-Italic hoveSubmenu" href="#">
+                                            Línea de Confección
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item DroidSerif-Italic hoveSubmenu" href="#">
+                                            Etiquetado
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">TIENDA ONLINE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">NOTICIAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">CONTÁCTOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<body>
+
+    <!-- titulo -->
+
+    <h1 class="titulo text-center fw-bold my-4 DroidSerif-Bold">NUESTROS SERVICIOS</h1>
+
+    <div style="background-color: #6e6e6e;">
+        <p class="text-center text-white py-2 DroidSerif-Italic" style="font-size: 20px;">Realizamos el proceso en
+            aduanas y en cualquier bodega del país 24/7.</p>
+    </div>
+
+    <!-- servicios -->
+
+    <div class="container my-4">
+        <div class="row" style="padding-bottom: 20px;">
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video id="video" src="../assets/videos/etiquetado/Etiquetado.mp4" style="width: 100%;" controls></video>
+                    <button class="boton-play" onclick="reproducir()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos posicion-barra2">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-etiquetado"></span>&nbspEtiquetado</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video id="video1" src="../assets/videos/etiquetado/Reacondicionamiento baja.mp4" style="width: 100%;" controls></video>
+                    <button class="boton-play" onclick="reproducir1()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos posicion-barra2">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-reacondicionamiento"></span>&nbspReacondicionamiento</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video id="video2" src="../assets/videos/etiquetado/Fraccionamiento baja.mp4" style="width: 100%;" controls></video>
+                    <button class="boton-play" onclick="reproducir2()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos posicion-barra2">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-reacondicionamiento"></span>&nbspFraccionamiento</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video id="video3" src="../assets/videos/etiquetado/PickingDistribucion baja.mp4" style="width: 100%;" controls></video>
+                    <button class="boton-play" onclick="reproducir3()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos posicion-barra2">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-reacondicionamiento"></span>&nbspPicking/Distribución</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video id="video4" src="../assets/videos/etiquetado/Co-Packing baja.mp4" style="width: 100%;" controls></video>
+                    <button class="boton-play" onclick="reproducir4()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos posicion-barra2">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-reacondicionamiento"></span>&nbspCo-Packing</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video id="video5" src="../assets/videos/etiquetado/Codificacion baja.mp4" style="width: 100%;" controls></video>
+                    <button class="boton-play" onclick="reproducir5()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos posicion-barra2">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-reacondicionamiento"></span>&nbspCodificación</h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- aqui va el codigo -->
+    <div style="background-color: #ff0000;">
+        <p class="text-center text-white py-2 DroidSerif-Italic" style="font-size: 20px;">Realizamos todas las Normas INEN</p>
+    </div>
+
+    <div class="container">
+        <div class="caja">
+            <ul class="my-4">
+                <li><b> RTE INEN 006</b> Extintores portátiles y agentes de extinción de fuego</li>
+                <li><b> RTE INEN 009</b> Artefactos de uso doméstico para producción de frio</li>
+                <li><b> RTE INEN 010</b> Productos cerámicos. Vajilla y demás artículos de uso doméstico, higiene o
+                    tocado</li>
+                <li><b> PRTE INEN 012</b></b> Transformadores de energía eléctrica</li>
+                <li><b> RTE INEN 013</b> Etiquetado de prendas de vestir, ropa de hogar, complementos de vestir</li>
+                <li><b> RTE INEN 014</b> Aceites lubricantes</li>
+                <li><b> RTE INEN 015</b> Rotulado de productos</li>
+                <li><b> RTE INEN 016</b> Varillas y alambres de acero para refuerzo de hormigón armado</li>
+                <li><b> RTE INEN 018</b> Perfiles estructurales de acero conformado en frío y perfiles estructurales de
+                    acero
+                    laminados en caliente</li>
+                <li><b> RTE INEN 022</b> Rotulado de productos alimenticios procesados, envasados y empaquetados</li>
+                <li><b> RTE INEN 025</b> Paneles de acero</li>
+                <li><b> RTE INEN 027</b> Tubos de acero al carbono soldados</li>
+                <li><b> RTE INEN 029</b> Perfiles corrugados y postes de acero para guardavías</li>
+                <li><b> RTE INEN 031</b> Líquido para frenos hidráulicos</li>
+                <li><b> RTE INEN 033</b> Baldosas cerámicas</li>
+                <li><b> RTE INEN 035</b> Eficiencia energética en artefactos de refrigeración de uso domestico</li>
+                <li><b> RTE INEN 036</b> Eficiencia energética. Lámparas fluorescentes compactas. Rangos de desempeño
+                    energético y
+                    etiquetado</li>
+                <li><b> RTE INEN 044</b> Encendedores</li>
+                <li><b> RTE INEN 045</b> Productos de alambre</li>
+                <li><b> RTE INEN 046</b> Requisitos de seguridad para bicicletas</li>
+                <li><b> RTE INEN 047</b> Sistema de bandejas metálicas porta-cables, electro-canales o canaletas</li>
+                <li><b> RTE INEN 049</b> Condones (preservativos) de látex de caucho natural</li>
+                <li><b> RTE INEN 051</b> Ollas a presión de uso doméstico</li>
+                <li><b> RTE INEN 053</b> Material de fricción para el sistema de frenos de automotores</li>
+                <li><b> RTE INEN 055</b> Aguas envasadas</li>
+                <li><b> RTE INEN 057</b> Tableros, gabinetes, cajas de paso, cajas de alumbrado, racks y accesorios de
+                    racks</li>
+                <li><b> RTE INEN 061</b> Pinturas</li>
+                <li><b> RTE INEN 064</b> Grasas y aceites comestibles</li>
+                <li><b> RTE INEN 065</b> Chupetes para bebes y niños pequeños</li>
+                <li><b> RTE INEN 068</b> Café, té, hierbas aromáticas y bebidas energéticas</li>
+                <li><b> RTE INEN 072</b> Eficiencia energética para acondicionadores de aire sin ductos</li>
+                <li><b> RTE INEN 076</b> Leche y productos lácteos</li>
+                <li><b> RTE INEN 077</b> Eficiencia energética de lavadoras electrodomésticas de ropa. Límites, métodos
+                    de ensayo
+                    y etiquetado</li>
+                <li><b> RTE INEN 079</b> Especias y condimentos</li>
+                <li><b> RTE INEN 080</b> Etiquetado de calzado</li>
+                <li><b> RTE INEN 082</b> Salsas y aderezos</li>
+                <li><b> RTE INEN 083</b> Televisores con sintonizador del estándar de televisión digital ISDB-T
+                    Internacional</li>
+                <li><b> RTE INEN 084</b> Vidrios de seguridad para vehículos automotores</li>
+                <li><b> RTE INEN 085</b> Papas (patatas) fritas congeladas</li>
+                <li><b> RTE INEN 086</b> Cascos de protección</li>
+                <li><b> RTE INEN 087</b> Cuadernos</li>
+                <li><b> RTE INEN 089</b> Seguridad de los juguetes</li>
+                <li><b> RTE INEN 090</b> Válvulas reductoras de presión</li>
+                <li><b> RTE INEN 091</b> Conmutadores. Aparatos de conmutación de bajo voltaje</li>
+                <li><b> PRTE INEN 092</b> Generadores. Grupos electrógenos y convertidores rotativos eléctricos</li>
+                <li><b> RTE INEN 093</b> Productos cosméticos</li>
+                <li><b> RTE INEN 094</b> Eficiencia energética de bombas y conjunto motor-bomba, para bombeo de agua
+                    limpia, en
+                    potencias de 0,187 kW A 0,746 kW y etiquetado</li>
+                <li><b> PRTE INEN 097</b> Rotulado de las partes y piezas para uso en motores</li>
+                <li><b> PRTE INEN 098</b> Cables para transmisión de voz y datos</li>
+                <li><b> RTE INEN 099</b> Máquinas de moldeo por inyección</li>
+                <li><b> RTE INEN 100</b> Materiales y artículos plásticos destinados a estar en contacto con los
+                    alimentos</li>
+                <li><b> PRTE INEN 101</b> Artefactos electrodomésticos para cocción por inducción</li>
+                <li><b> RTE INEN 103</b> Productos de confitería</li>
+                <li><b> RTE INEN 104</b> Muebles</li>
+                <li><b> RTE INEN 105</b> Pilas eléctricas</li>
+                <li><b> RTE INEN 106</b> Chocolates</li>
+                <li><b> RTE INEN 107</b> Alcohol etílico</li>
+                <li><b> RTE INEN 108</b> Aspersores</li>
+                <li><b> RTE INEN 110</b> Calentadores de agua eléctricos de acumulación</li>
+                <li><b> RTE INEN 114</b> Altavoces</li>
+                <li><b> RTE INEN 115</b> Acumuladores eléctricos</li>
+                <li><b> RTE INEN 116</b> Hornos de panadería</li>
+                <li><b> RTE INEN 117</b> Eficiencia energética en televisiones. Reporte de consumo de energía, método de
+                    ensayo y
+                    etiquetado</li>
+                <li><b> RTE INEN 120</b> Herramientas neumáticas</li>
+                <li><b> PRTE INEN 122</b> Eficiencia energética en hornos eléctricos. Reporte de consumo de energía y
+                    etiquetado
+                </li>
+                <li><b> PRTE INEN 123</b> Eficiencia energética para hornos microondas</li>
+                <li><b> RTE INEN 124</b> Eficiencia energética y etiquetado de máquinas lavadoras-secadoras de ropa</li>
+                <li><b> RTE INEN 126</b> Joyas y bisutería</li>
+                <li><b> RTE INEN 129</b> Filtros de aceite, filtros de combustible: diésel y gasolina, y filtros del
+                    aire de
+                    entrada para motores de combustión interna</li>
+                <li><b> RTE INEN 130</b> Rodamientos de bolas y de rodillos o de agujas</li>
+                <li><b> RTE INEN 131</b> Seguridad e higiene de maquinaria para procesamiento de alimentos</li>
+                <li><b> RTE INEN 132</b> Productos absorbentes de papel</li>
+                <li><b> RTE INEN 133</b> Lavavajillas. Eficiencia energética y etiquetado</li>
+                <li><b> PRTE INEN 135</b> Rotulado de artículos para fiestas</li>
+                <li><b> RTE INEN 137</b> Amoladoras</li>
+                <li><b> RTE INEN 138</b> Eficiencia energética para ventiladores de motor de potencia eléctrica de
+                    entrada entre
+                    125 W y 500 kW</li>
+                <li><b> RTE INEN 141</b> Requisitos de seguridad y eficiencia energética para transformadores de
+                    distribución</li>
+                <li><b> PRTE INEN 142</b> Llaves o válvulas de uso domiciliario</li>
+                <li><b> RTE INEN 146</b> Conjunto de tintas para impresión, color y transparencia</li>
+                <li><b> RTE INEN 147</b> Planchas eléctricas</li>
+                <li><b> RTE INEN 148</b> Tirafondos y tornillos para madera</li>
+                <li><b> PRTE INEN 151</b> Galletas</li>
+                <li><b> RTE INEN 152</b> Rendimiento térmico de colectores solares</li>
+                <li><b> RTE INEN 157</b> Rotulado Marroquinería</li>
+                <li><b> RTE INEN 163</b> Velas, cirios y similares</li>
+                <li><b> RTE INEN 164</b> Ceras para pisos y betunes</li>
+                <li><b> RTE INEN 165</b> Máquinas de afeitar</li>
+                <li><b> PRTE INEN 166</b> Cerraduras mecánicas y electromecánicas para puertas</li>
+                <li><b> RTE INEN 167</b> Fuentes de alimentación de baja tensión</li>
+                <li><b> RTE INEN 168</b> Lámparas de vapor de mercurio, de sodio y de halogenuro metálico</li>
+                <li><b> RTE INEN 169</b> Lámparas halógenas de tungsteno</li>
+                <li><b> RTE INEN 170</b> Tornillos autorroscantes y auto taladrantes</li>
+                <li><b> RTE INEN 171</b> Juegos de cables para bujías de encendido</li>
+                <li><b> PRTE INEN 173</b> Sierras eléctricas manuales</li>
+                <li><b> RTE INEN 174</b> Contadores de agua</li>
+                <li><b> RTE INEN 175</b> Pasadores, clavijas y chavetas</li>
+                <li><b> RTE INEN 176</b> Remaches</li>
+                <li><b> RTE INEN 177</b> Rodamientos de rodillos cónicos</li>
+                <li><b> RTE INEN 178</b> Pernos de anclaje expandibles para concreto</li>
+                <li><b> RTE INEN 179</b> Aparatos para cuidado de la piel o del cabello</li>
+                <li><b> RTE INEN 180</b> Esterilizadores y equipos de lavado y desinfección</li>
+                <li><b> RTE INEN 181</b> Equipos de protección respiratoria</li>
+                <li><b> PRTE INEN 182</b> frutas y vegetales en conserva</li>
+                <li><b> PRTE INEN 183</b> Gelatinas y mezclas en polvo para preparar refrescos o bebidas instantáneas
+                </li>
+                <li><b> PRTE INEN 184</b> Jugos, concentrados, néctares, bebidas de frutas y vegetales y refrescos</li>
+                <li><b> RTE INEN 185</b> Instrumentos dentales rotatorios. Instrumentos de diamante</li>
+                <li><b> RTE INEN 186</b> Equipos electro médicos</li>
+                <li><b> RTE INEN 187</b> Alimentos para animales de compañía</li>
+                <li><b> RTE INEN 188</b> Rotulado de los productos utilizados para la alimentación de los animales</li>
+                <li><b> PRTE INEN 189</b> Rotulado de bebidas alcohólicas</li>
+                <li><b> RTE INEN 190</b> Equipos electro médicos – seguridad de las mesas de operación</li>
+                <li><b> RTE INEN 191</b> Cortadoras de pelo y aparatos similares</li>
+                <li><b> RTE INEN 192</b> Triturador de basura</li>
+                <li><b> RTE INEN 193</b> Bombas de aire de mano o pedal</li>
+                <li><b> RTE INEN 194</b> Candados. Nivel de seguridad y resistencia a la corrosión</li>
+                <li><b> RTE INEN 195</b> Gatos hidráulicos y mecánicos</li>
+                <li><b> RTE INEN 196</b> Guirnaldas luminosas</li>
+                <li><b> RTE INEN 197</b> Aspiradoras</li>
+                <li><b> RTE INEN 198</b> Envases metálicos</li>
+                <li><b> RTE INEN 199</b> Equipos odontológicos</li>
+                <li><b> RTE INEN 200</b> Artículos de vidrio y vitrocerámica en contacto con alimentos</li>
+                <li><b> RTE INEN 202</b> Equipos de impresión y digitalización</li>
+                <li><b> RTE INEN 203</b> Maquinas con motor para uso en la cocina</li>
+                <li><b> RTE INEN 205</b> Sillones dentales</li>
+                <li><b> RTE INEN 206</b> Unidades dentales</li>
+                <li><b> RTE INEN 209</b> Rotulado de las carcasas de celular y productos similares</li>
+                <li><b> RTE INEN 210</b> Cepillos dentales</li>
+                <li><b> RTE INEN 211</b> Rotulado de balones, pelotas y artículos inflables para recreo y deporte</li>
+                <li><b> RTE INEN 212</b> Fertilizantes o abonos. Urea</li>
+                <li><b> RTE INEN 213</b> Colchones</li>
+                <li><b> RTE INEN 214</b> Herramientas manuales. Carretillas</li>
+                <li><b> RTE INEN 215</b> Protectores anti ruido</li>
+                <li><b> RTE INEN 216</b> Gafas protectoras y máscaras especiales para la protección de trabajadores</li>
+                <li><b> RTE INEN 217</b> Cinturones de seguridad y equipos de protección individual para prevención de
+                    caídas</li>
+                <li><b> RTE INEN 218</b> Equipos de flotación individual</li>
+                <li><b> PRTE INEN 219</b> Herramientas manuales. Martillos</li>
+                <li><b> PRTE INEN 226</b> Válvulas para uso industrial</li>
+                <li><b> PRTE INEN 228</b> Barras y perfiles de acero inoxidable</li>
+                <li><b> PRTE INEN 229</b> Artículos para fuegos artificiales</li>
+                <li><b> PRTE INEN 230</b> Pistachos con cáscara</li>
+                <li><b> PRTE INEN 231</b> Controladores programables y equipos asociados</li>
+                <li><b> RTE INEN 232</b> Grasas y aceites utilizados durante los procesos de frituras</li>
+                <li><b> PRTE INEN 234</b> Bombas industriales</li>
+                <li><b> PRTE INEN 235</b> Válvulas de seguridad</li>
+                <li><b> RTE INEN 237</b> Cementos asfálticos</li>
+                <li><b> PRTE INEN 244</b> Válvulas árboles de navidad</li>
+                <li><b> PRTE INEN 245</b> Bridas para tubería y accesorios bridados para uso industrial</li>
+                <li><b> RTE INEN 246</b> Tubos de acero inoxidable</li>
+                <li><b> RTE INEN 247</b> Seguridad y eficiencia energética para calentadores de agua eléctricos
+                    instantáneos sin
+                    acumulación de agua</li>
+                <li><b> RTE INEN 251</b> Perfiles, barras, varillas y tubos extruidos de aluminio</li>
+                <li><b> RTE INEN 252</b> Recipientes de uso doméstico para cocción fabricados en aluminio, hierro y
+                    acero</li>
+                <li><b> RTE INEN 254</b> Espejos de vidrio plano plateado</li>
+                <li><b> RTE INEN 258</b> Etiquetado de plaguicidas para uso doméstico</li>
+                <li><b> PRTE INEN 264</b> Calzado de protección y calzado de seguridad</li>
+                <li><b> PRTE INEN 269</b> Fregaderos de cocina</li>
+                <li><b> RTE INEN 270</b> Guantes de protección</li>
+                <li><b> RTE INEN 275</b> Bolígrafos, portaminas y minas de grafito</li>
+                <li><b> PRTE INEN 276</b> Cascos para canotaje y deportes en rápidos de agua</li>
+                <li><b> RTE INEN 291</b> Materiales de plástico reciclado destinados a estar en contacto con alimentos –
+                    Proceso
+                    de reciclado del Poli (tereftalato de etileno) – (PET) y resina resultante – PET-PCR grado
+                    alimentario</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ------------------------------ -->
+
+    <!-- titulo -->
+
+    <h1 class="titulo text-center fw-bold my-4 DroidSerif-Bold">NUESTROS TRABAJOS DE
+        ETIQUETADO</h1>
+
+    <div style="background-color: #6e6e6e;">
+        <p class="text-center text-white py-2 DroidSerif-Italic" style="font-size: 20px;">Poseemos la capacidad de
+            atender los mas exigentes proyectos, tanto de calidad como de cantidad.</p>
+    </div>
+
+    <!-- servicios -->
+
+    <div class="container my-4">
+        <div class="row" style="padding-bottom: 20px;">
+            <div class="col-md-4">
+                <div class="box-e">
+                    <img src="../assets/img/etiquetado/Nuestros trabajos Etiquetado-01.jpg" loading="lazy">
+                    <div class="power-e">
+                        <h2 class="DroidSerif-Bold"><span class="icon-etiquetado"></span>&nbspEtiquetado</h2>
+                        <p class="DroidSerif-Italic">Poner etiquetas cosidas o adhesivas a los productos que ingresan al
+                            país o a los clientes que necesitan este servicio en cualquier medida y para cualquier
+                            producto.</p>
+                        <a href="#" class="leer-e DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="box-e">
+                    <img src="../assets/img/etiquetado/2.jpg" loading="lazy">
+                    <div class="power-e">
+                        <h2 class="DroidSerif-BoldItalic"><span
+                                class="icon-reacondicionamiento"></span>&nbspReacondicionamiento
+                        </h2>
+                        <p class="DroidSerif-Italic">Limpiar, adecuar, reorganizar mercadería que vienen alteradas y que
+                            necesiten este proceso antes de llegar al consumidor final.</p>
+                        <a href="#" class="leer-e DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="box-e">
+                    <img src="../assets/img/etiquetado/3.jpg" loading="lazy">
+                    <div class="power-e">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-fraccionamieno"></span>&nbspFraccionamiento
+                        </h2>
+                        <p class="DroidSerif-Italic">Productos líquidos o sólidos que necesiten un cambio de
+                            presentación en cualquier tipo de envase.</p>
+                        <a href="#" class="leer-e DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box-e">
+                    <img src="../assets/img/etiquetado/4.jpg" loading="lazy">
+                    <div class="power-e">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-picking"></span>&nbspPicking/Distribución
+                        </h2>
+                        <p class="DroidSerif-Italic">Proceso que permite optimizar costo y tiempo al momento de ingresar
+                            la mercadería a la aduana y ser despachada a los puntos de ventas.</p>
+                        <a href="#" class="leer-e DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="box-e">
+                    <img src="../assets/img/etiquetado/5.jpg" loading="lazy">
+                    <div class="power-e">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-co-packing"></span>&nbspCo-Packing</h2>
+                        <p class="DroidSerif-Italic">Permite la unificación de uno o más productos para promociones de
+                            los clientes.</p>
+                        <a href="#" class="leer-e DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="box-e">
+                    <img src="../assets/img/etiquetado/6.jpg" loading="lazy">
+                    <div class="power-e">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-codificacion"></span>&nbspCodificación</h2>
+                        <p class="DroidSerif-Italic">A Través de tecnología de punta, manejar digitalmente el inventario
+                            dando al cliente facilidades en su logística.</p>
+                        <a href="#" class="leer-e DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            window.reproducir = function() {
+                document.getElementById("video").play();
+            };
+            window.reproducir1 = function() {
+                document.getElementById("video1").play();
+            };
+            window.reproducir2 = function() {
+                document.getElementById("video2").play();
+            };
+            window.reproducir3 = function() {
+                document.getElementById("video3").play();
+            };
+            window.reproducir4 = function() {
+                document.getElementById("video4").play();
+            };
+            window.reproducir5 = function() {
+                document.getElementById("video5").play();
+            };
+            </script>
+</body>
+
+<footer>
+    <div class="fondo-pie-pagina py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1 class="DroidSerif-Bold text-white">¡REGISTRARME!</h1>
+                    <P class="text-white DroidSerif-Regular">
+                        Recibe oferta especiales, noticias exclusivas de productos e información sobre eventos
+                        directamente en tu
+                        bandeja de entrada.
+                    </P>
+                    <input type="submit" value="REGISTRATE AQUÍ" class="btn btn-danger px-5"
+                        style="color:var(--color-secundario); color: white;">
+                    <div class="redesSociales my-4">
+                        <a href="https://www.instagram.com/lisfashion.ec/" class="fab fa-instagram text-white"></a>
+                        <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white" style="margin-left: 10px;"></a>
+                        <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white" style="margin-left: 10px;"></a>
+                        <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white" style="margin-left: 10px;"></a>
+                        <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin-in text-white" style="margin-left: 10px;"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">NOSOTROS</h5>
+                    <P class="text-white DroidSerif-Regular">Contáctanos</P>
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">INFORMACIÓN</h5>
+                    <P class="text-white DroidSerif-Regular">Preguntas frecuentes:</P>
+                    <P class="text-white DroidSerif-Regular">¿Cómo comprar?</P>
+                    <P class="text-white DroidSerif-Regular">Guía de tallas</P>
+                    <P class="text-white DroidSerif-Regular">Actualiza tus datos</P>
+                    <P class="text-white DroidSerif-Regular">Registrar tu bono</P>
+                    <P class="text-white DroidSerif-Regular">Promociones vigentes</P>
+                </div>
+                <div class="col-md-3">
+                    <P class="text-white DroidSerif-Regular"><span class="fas fa-map-marker-alt" Style="color:var(--color-secundario); font-size: 15px;"></span> UBICACIÓN</P>                        
+                    <P class="text-white DroidSerif-Regular"><span class="far fa-user-circle" style="color:var(--color-secundario); font-size: 15px;"></span> MI CUENTA</P>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-end text-white DroidSerif-Regular">© 2021 CPROTEC Derechos Reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Linea de Confección</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon/logo.svg" />
+    <link rel="stylesheet" href="../css/serviciosStyle.css">
+    <link rel="stylesheet" href="../css/videosConfeccionStyle.css">
+    <link rel="stylesheet" href="../css/iconos.css">
+    <link rel="stylesheet" href="../css/fuentes.css">
+    <link rel="stylesheet" href="../assets/icomoon/fonts/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+<header>
+    <div class="container-fluid color-dark">
+        <div class="sub-contenedor row align-items-center py-1 mx-5 px-5">
+            <div class="ocultar-redes col-4 col-md-3 col-lg-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-xl-5 ocultar">
+                        <div class="row align-items-center">
+                            <div class="col-3">
+                                <span class="fas fa-check-circle text-white my-2" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="logo1 text-white my-2"> <span>Síguenos</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-start align-items-center">
+                            <div class="col-2">
+                                <a href="https://www.instagram.com/lisfashion.ec" class="fab fa-instagram text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin text-white tamanioRedesHeader my-2 fa-lg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-5 col-md-7 col-lg-5">
+                <div class="row">                
+                    <input class="barra-buscar bg-dark text-white" type="text" placeholder="Busca tu producto">
+                    <button type="button" class="btn btn-outline-light" title="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>                
+                </div>
+            </div>
+            
+            <div class="col">                        
+                <div class="b row justify-content-around align-items-center">
+                    <div class="ocultar-cuenta col-md-6 justify-content-end">
+                        <a href="#" class="text-white my-2"> <span class="">Mi cuenta</span></a>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <span class="fa fa-user-circle text-white tamanioRedesHeader fa-lg"></span>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <a href=""><span class="fav fas fa-map-marker-alt text-white tamanioRedesHeader fa-lg"></span></a>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <a href=""><span class="fav fas fa-shopping-cart text-white tamanioRedesHeader fa-lg"></span></a>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>    
+    <!--FIN BARRA SUPERIOR PRINCIPAL- BUSCAR PRODUCTO-->
+    
+    <!--INICIO BARRA SUPERIOR SECUNDARIA BUSCAR PRODUCTO-->
+    <div class="barra-secundario">
+        <div class="row ">
+            <nav class="col-12 navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid row">
+                    <a class="text-center navbar-brand col-4" href="#">
+                        <img src="../resources/icons/lisfashion-nav.svg"  width="200px" class="text-mr">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="div-links text-center collapse navbar-collapse col-8" id="navbarSupportedContent" style="width: 100%;"> 
+                        <ul class="navbar-nav ms-auto mb-5 mb-lg-1">
+                            <li class="nav-item">
+                                <a class="nav-link active DroidSerif-Regular" aria-current="page" href="#">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">NOSOTROS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">PRODUCTOS</a>
+                            </li>
+                            <li class="nav-item dropdown"> 
+                                <a class="nav-link dropdown-toggle DroidSerif-Regular" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item DroidSerif-Italic hoveSubmenu" href="#">
+                                            Línea de Confección
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item DroidSerif-Italic hoveSubmenu" href="#">
+                                            Etiquetado
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">TIENDA ONLINE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">NOTICIAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link DroidSerif-Regular" href="#">CONTÁCTOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<body>
+
+    <!-- titulo -->
+
+    <h1 class="titulo text-center fw-bold my-4 DroidSerif-Bold">NUESTROS SERVICIOS</h1>
+
+    <div style="background-color: #6e6e6e;">
+        <p class="text-center text-white py-2 DroidSerif-Italic" style="font-size: 20px;">Contamos con 7 líneas grandes
+            de confección, las cuales desarrollamos a los gustos del cliente en la mejor calidad.</p>
+    </div>
+
+    <!-- servicios -->
+
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video class="video-l" id="video" src="../assets/videos/linea confeccion/Bordado.mp4" style="width:100%"  type="video/mp4" controls ></video>
+                    <button class="boton-play" onclick="reproducir()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-bordado"></span>&nbsp;Bordado</h2>
+                        
+                    </div>
+                    </div>
+                </div>
+            
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video class="video-l" id="video1" src="../assets/videos/linea confeccion/Sublimado.mp4" style="width:100%" type="video/mp4"  controls></video>
+                    <button class="boton-play" onclick="reproducir1()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-sublimado"></span>&nbsp;Sublimado
+                        </h2>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video class="video-l" id="video2" src="../assets/videos/linea confeccion/Serigrafia.mp4" style="width:100%"  type="video/mp4" controls></video>
+                    <button class="boton-play" onclick="reproducir2()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-serigrafia"></span>&nbsp;Serigrafía
+                        </h2>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video class="video-l" id="video3" src="../assets/videos/linea confeccion/Plotter.mp4" style="width: 100%;" type="video/mp4" controls></video>
+                    <button class="boton-play" onclick="reproducir3()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra">
+                        <h2 class="DroidSerif-BoldItalic h2-video" ><span
+                                class="icon-ploter"></span>&nbsp;Plotter de impresión</h2>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video class="video-l" id="video4" src="../assets/videos/linea confeccion/Corte laser.mp4" class="" style="width: 100%;"
+                    type="video/mp4" controls></video>
+                    <button class="boton-play" onclick="reproducir4()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra ">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-corte-laser"></span>&nbsp;Corte
+                            Láser</h2>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video  class="video-l" id="video5"src="../assets/videos/linea confeccion/Maquila.mp4" style="width: 100%;" type="video/mp4" controls></video>
+                    <button class="boton-play" onclick="reproducir5()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra ">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span class="icon-maquila"></span>&nbsp;Maquila</h2>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="thevideo">
+                    <video class="video-l" id="video6" src="../assets/videos/linea confeccion/Bordado Digital.mp4" style="width: 100%;"
+                    type="video/mp4" controls></video>
+                    <button class="boton-play" onclick="reproducir6()" ><i class="far fa-play-circle"></i></button>
+                    <div class="power-videos  posicion-barra">
+                        <h2 class="DroidSerif-BoldItalic h2-video"><span
+                                class="icon-bordado-digital"></span>&nbsp;Bordado Digital</h2>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- nuestros trabajo -->
+
+    <!-- titulo -->
+
+    <h1 class="titulo text-center fw-bold my-4 DroidSerif-Bold">NUESTROS TRABAJOS</h1>
+
+    <div style="background-color: #6e6e6e;">
+        <p class="text-center text-white py-2 DroidSerif-Italic" style="font-size: 20px;">Poseemos la capacidad de
+            atender los mas exigentes proyectos,tanto de calidad como de cantidad.</p>
+    </div>
+
+
+    <!-- servicios -->
+
+    <div class="container my-4">
+        <div class="row" style="padding-bottom: 20px;" >
+            <div class="col-md-4"style="top: 40px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/Nuestros trabajos Confeccion-07.jpg" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-Bold"><span class="icon-bordado"></span>&nbsp;Bordado</h2>
+                        <p class="DroidSerif-Italic">Contamos con las bordadoras de última tecnología alemanas, que nos
+                            permite hacer bordados, bordados 3d manteles pegar lentejuelas pegar tiras ,cintas bordadas,
+                            muñecos puf.</p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style="top: 40px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/sublimacion.webp" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-sublimado"></span>&nbsp;Sublimado</h2>
+                        <p class="DroidSerif-Italic">Contamos con máquinas de última tecnología que permite hacer
+                            calandrado hasta 1,80 de ancho, ropa deportiva, ropa de moda, artículos publicitarios,
+                            cuadros, tapicería personalizada.</p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4"style="top: 40px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/Nuestros trabajos Confeccion-03.jpg" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-serigrafia"></span>&nbsp;Serigrafía</h2>
+                        <p class="DroidSerif-Italic">Contamos con un plotter americano de 10 brazos automático que nos
+                            permite hacer una producción de 7.000 prendas diarias en varios colores además de plotter
+                            manuales.</p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="row" >
+            <div class="col-md-4" style="top: 40px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/Nuestros trabajos Confeccion-04.jpg" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-ploter"></span>&nbsp;lotter de impresión
+                        </h2>
+                        <p class="DroidSerif-Italic">Máquinas japonesas que nos permiten imprimir en todo tipo de papel
+                            con la mayor eficiencia y calidad hasta 1,80 mts de ancho
+                            para cualquier desarrollo de sublimación.</p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4"style="top: 40px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/Nuestros trabajos Confeccion-05.jpg" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-corte-laser"></span>&nbsp;Corte Láser</h2>
+                        <p class="DroidSerif-Italic">Nuestras máquinas nos permiten hacer en vidrio y acrílico hasta 10
+                            cm de profundidad curvos o rectos además de usar otras superficies como textiles, madera, y
+                            metales.</p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4"style="top: 40px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/Nuestros trabajos Confeccion-06.jpg" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-maquila"></span>&nbsp;Maquila</h2>
+                        <p class="DroidSerif-Italic">Poseemos más de 40 máquinas entre overlock, rectas electrónicas,
+                            recubridoras, elasticadoras o ojaladoras, que nos permite una versatilidad en producción.
+                        </p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4" style="top: 60px;">
+                <div class="box">
+                    <img src="../assets/img/linea de confeccion/Nuestros trabajos Confeccion-01.jpg" loading="lazy">
+                    <div class="power">
+                        <h2 class="DroidSerif-BoldItalic"><span class="icon-bordado-digital"></span>&nbsp;Bordado Digital
+                        </h2>
+                        <p class="DroidSerif-Italic">Un nuevo proceso que permite abaratar costos al bordado tradicional
+                            brindando mayor nitidez a los logos.</p>
+                        <a href="#" class="leer DroidSerif-Regular"> Leer más..</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="fondo-pie-pagina py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1 class="DroidSerif-Bold text-white">¡REGISTRARME!</h1>
+                    <P class="text-white DroidSerif-Regular">
+                        Recibe oferta especiales, noticias exclusivas de productos e información sobre eventos
+                        directamente en tu
+                        bandeja de entrada.
+                    </P>
+                    <input type="submit" value="REGISTRATE AQUÍ" class="btn btn-danger px-5"
+                        style="color:var(--color-secundario); color: white;">
+                    <div class="redesSociales my-4">
+                        <a href="https://www.instagram.com/lisfashion.ec/" class="fab fa-instagram text-white"></a>
+                        <a href="https://www.facebook.com/lisfashionecu" class="fab fa-facebook-f text-white" style="margin-left: 10px;"></a>
+                        <a href="https://vm.tiktok.com/ZMR5y5dJs/" class="fab fa-tiktok text-white" style="margin-left: 10px;"></a>
+                        <a href="https://twitter.com/lisfashionsaec?s=09" class="fab fa-twitter text-white" style="margin-left: 10px;"></a>
+                        <a href="https://www.linkedin.com/in/lis-fashion-2598aa21b/" class="fab fa-linkedin-in text-white" style="margin-left: 10px;"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">NOSOTROS</h5>
+                    <P class="text-white DroidSerif-Regular">Contáctanos</P>
+                    <h5 class="fw-bold" style="color:var(--color-secundario);">INFORMACIÓN</h5>
+                    <P class="text-white DroidSerif-Regular">Preguntas frecuentes:</P>
+                    <P class="text-white DroidSerif-Regular">¿Cómo comprar?</P>
+                    <P class="text-white DroidSerif-Regular">Guía de tallas</P>
+                    <P class="text-white DroidSerif-Regular">Actualiza tus datos</P>
+                    <P class="text-white DroidSerif-Regular">Registrar tu bono</P>
+                    <P class="text-white DroidSerif-Regular">Promociones vigentes</P>
+                </div>
+                <div class="col-md-3">
+                    <P class="text-white DroidSerif-Regular"><span class="fas fa-map-marker-alt" Style="color:var(--color-secundario); font-size: 15px;"></span> UBICACIÓN</P>                        
+                    <P class="text-white DroidSerif-Regular"><span class="far fa-user-circle" style="color:var(--color-secundario); font-size: 15px;"></span> MI CUENTA</P>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-end text-white DroidSerif-Regular">© 2021 CPROTEC Derechos Reservados</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<script src="./js/jquery/jquery-3.6.1.min.js"></script>
+
+
+        <script type="text/javascript">
+            window.reproducir = function() {
+                document.getElementById("video").play();
+            };
+            window.reproducir1 = function() {
+                document.getElementById("video1").play();
+                
+            };
+            window.reproducir2 = function() {
+                document.getElementById("video2").play();
+                
+            };
+            window.reproducir3 = function() {
+                document.getElementById("video3").play();
+            };
+            window.reproducir4 = function() {
+                document.getElementById("video4").play();
+                
+            };
+            window.reproducir5 = function() {
+                document.getElementById("video5").play();
+                
+            };
+            window.reproducir6 = function() {
+                document.getElementById("video6").play();
+                
+            };
+            
+            </script>
+</html>
