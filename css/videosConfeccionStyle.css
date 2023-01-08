@@ -3,8 +3,8 @@
     border: none;
     color: rgb(243, 236, 236);
     font-size: 50px; 
-    left:190px; 
-    top: -208px;
+    left:152px; 
+    top: -164px;
     }
     video::-webkit-media-controls {
       display: none;
@@ -34,8 +34,8 @@
     @media screen and (min-width: 768px) and (max-width: 1023px){    
       .boton-play  {
         font-size: 50px;
-        left:100px; 
-        top: -150px;
+        left:85px; 
+        top: -133px;
       }
       .video-l video {
         height: 300px;
@@ -126,8 +126,8 @@
     @media screen  and (max-width: 411px){
     .boton-play  {
       font-size: 50px;
-      left:130px; 
-      top: -180px;
+      left:96px; 
+      top: -141px;
     }
     .power-videos h2 {
       font-size: 15px;  
