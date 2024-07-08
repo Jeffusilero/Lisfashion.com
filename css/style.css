@@ -240,3 +240,35 @@
     }
 
 }
+
+
+
+
+.header-icon-whats {
+    position: fixed;
+    width: 225px;
+    height: 350px;
+    bottom: 50px;
+    right: 80px;
+    flex: 0 1 15%;
+    transition: all 0.5s;
+    justify-content:end;
+    align-items: end;
+    display: flex;
+    size: 40px;
+    z-index: 100;
+    
+}
+
+.header-icon-whats:hover {
+    /* flex: 1 1 10%;
+    background-image: url(../assets/img/fondo-whastsapp.png);
+    background-repeat: no-repeat;
+    background-size: contain; */
+
+    background-color: rgb(221, 221, 174);
+}
+
+#whastsapp-icon {
+    width: 40;
+}
